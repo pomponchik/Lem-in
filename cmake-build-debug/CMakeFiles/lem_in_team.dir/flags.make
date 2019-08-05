@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/hlarson/lem_in_team/includes -I/Users/hlarson/lem_in_team/Libft/includes 
+C_INCLUDES = -I/Users/hlarson/lim/includes -I/Users/hlarson/lim/Libft/includes 
 

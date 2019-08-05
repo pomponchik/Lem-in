@@ -14,7 +14,7 @@
 
 int     ft_exit_adjacency(t_graph **graph)
 {
-    int     i;
+  /*  int     i;
     t_graph *tmp;
 
     i = 0;
@@ -29,7 +29,7 @@ int     ft_exit_adjacency(t_graph **graph)
         }
         i++;
     }
-    free(graph);
+    free(graph);*/
     return (-1);
 }
 

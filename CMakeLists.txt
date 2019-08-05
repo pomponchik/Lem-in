@@ -7,7 +7,7 @@ include_directories(includes)
 include_directories(Libft/includes)
 
 add_executable(lem_in_team
-        includes/head.h
+        includes/lem_in.h
         Libft/includes/libft.h
         Libft/ft_atoi.c
         Libft/ft_atoi_llu.c

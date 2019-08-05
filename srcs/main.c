@@ -14,15 +14,16 @@
 
 int		main(int argc, char **argv)
 {
-	t_graph **graph;
+	t_graph *graph;
     int     i;
+    size_t  count;
 
 	graph = NULL;
 	if (argc == 1)
 		return (printf("\n"));
-	i = ft_validate(&graph, argv);
-	if (i != -1)
-	    ft_exit_adjacency(graph);
+	i = ft_validate(&graph, argv, &count);
+//	if (i != -1)
+//	    ft_exit_adjacency(graph);
 	printf("%d\n", i);
 	return (0);
 }

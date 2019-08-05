@@ -12,48 +12,28 @@
 
 #include "lem_in.h"
 
-static int get_first_name(char *line, int i, t_graph **graph)
+static int get_first_name(char *line, int i, t_graph **graph, size_t count)
 {
-    int     j;
-    int     k;
-
-    j = 0;
-    k = 0;
-    while (graph[j])
+    while (graph[count])
     {
-        if (ft_strncmp((graph[j])->name, line, i) == 0)
-        {
-            k = 1;
+        if (ft_strncmp((graph[count])->name, line, i) == 0)
             break ;
-        }
-        j++;
+        count--;
     }
-    if (k == 0)
-        return (-1);
-    return (j);
+    return (count);
 }
 
-static int get_second_link(char *line,  t_graph **graph)
+static int get_second_link(char *line,  t_graph **graph, size_t count)
 {
-    int     j;
-    int     k;
-
-    j = 0;
-    k = 0;
-    while (graph[j])
+    while (graph[count])
     {
-        if (ft_strcmp((graph[j])->name, line) == 0)
-        {
-            k = 1;
+        if (ft_strcmp((graph[count])->name, line) == 0)
             break ;
-        }
-        j++;
+        count--;
     }
-    if (k == 0)
-        return (-1);
-    return (j);
+    return (count);
 }
-
+/*
 static t_graph      *copy_inform(t_graph *graph)
 {
     t_graph *tmp;
@@ -67,24 +47,15 @@ static t_graph      *copy_inform(t_graph *graph)
     tmp->ant_number = tmp->ant_number;
     tmp->adjacency = NULL;
     return (tmp);
-}
+}*/
 
 static void        connet_link(t_graph **graph, int first_link, int second_link)
 {
-    t_graph *tmp;
-    t_graph *another_tmp;
-
-    tmp = graph[first_link];
-    while (tmp->adjacency)
-        tmp = tmp->adjacency;
-    tmp->adjacency = copy_inform(graph[second_link]);
-    another_tmp = graph[second_link];
-    while (another_tmp->adjacency)
-        another_tmp = another_tmp->adjacency;
-    another_tmp->adjacency = copy_inform(graph[first_link]);
+   ft_lstadd(&graph[first_link]->adjacency, ft_lstnew(&second_link, sizeof(second_link)));
+   ft_lstadd(&graph[second_link]->adjacency, ft_lstnew(&first_link, sizeof(second_link)));
 }
 
-int        ft_make_adjacency(char *line, t_graph **graph)
+int        ft_make_adjacency(char *line, t_graph **graph, size_t count)
 {
     int     i;
     char    *c;
@@ -94,14 +65,14 @@ int        ft_make_adjacency(char *line, t_graph **graph)
     i = 0;
     while (line[i] && line[i] != '-')
         i++;
-    first_link = get_first_name(line, i, graph);
-    if (first_link == -1)
+    first_link = get_first_name(line, i, graph, count);
+    if (first_link == 0)
         return (ft_exit_adjacency_error_two(line, graph));
     c = ft_strnew(ft_strlen(line) - i);
     c = ft_strcpy(c, line + i + 1);
-    second_link = get_second_link(c, graph);
-    if (first_link == second_link || second_link == -1)
-        return (ft_exit_adjacency_error(c, line, graph));
+    second_link = get_second_link(c, graph, count);
+    if (first_link == second_link || second_link == 0)
+        return (-1);//ft_exit_adjacency_error(c, line, graph));
     connet_link(graph, first_link, second_link);
     return (ft_exit_adjacency_norm(c, line));
 }
