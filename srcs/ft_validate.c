@@ -107,6 +107,7 @@ int		ft_validate(t_graph **graph, char **argv, size_t *count)
 	char	*line;
 	t_help	*help;
 	int		n;
+	t_graph *asd;
 
 	k = open(argv[1], O_RDONLY);
 	help = NULL;
@@ -116,10 +117,12 @@ int		ft_validate(t_graph **graph, char **argv, size_t *count)
 		return (-1);
 	if (ft_get_basic_coord(k, &line, &help) == -1)
 	    return (-1);
-	*graph = create_graph(help, n, count);
-	put_first_adjacency(line, graph, count);
-	if (ft_get_adjacency(&line, graph, k, count) == -1)
+	asd = create_graph(help, n, count);
+	//*graph = asd;
+	put_first_adjacency(line, &asd, *count);
+	if (ft_get_adjacency(&line, &asd, k, *count) == -1)
 	    return (-1);
 	ft_strdel(&line);
+	*graph = asd;
 	return (0);
 }

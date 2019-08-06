@@ -47,7 +47,7 @@ t_graph			*create_graph(t_help *help, int n, size_t *count)
 	i = 0;
 	tmp = help;
 	*count = count_elem(help);
-	graph = (t_graph *)malloc(sizeof(t_graph) * (*count));
+	graph = (t_graph *)ft_memalloc(sizeof(t_graph) * (*count));
 	while (tmp)
 	{
 		swap = tmp->next;
@@ -58,5 +58,5 @@ t_graph			*create_graph(t_help *help, int n, size_t *count)
 		i++;
 	}
 	(graph[0]).ant_number = n;
-	return (graph);
+	return ((t_graph *)graph);
 }
