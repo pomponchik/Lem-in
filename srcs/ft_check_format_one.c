@@ -6,7 +6,7 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/02 15:33:11 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/04 18:01:24 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/10 21:32:56 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int				ft_get_num(t_help **help, char *line, int *i, int j)
 }
 
 int				ft_check_format_one(t_help **help,
-				char *line, int *start, int *end)
+		char *line, int *start, int *end)
 {
 	int		i;
 	t_help	*tmp;
@@ -80,7 +80,7 @@ int				ft_check_format_one(t_help **help,
 	j = ft_strlen(line);
 	i = find_char(line, ' ');
 	if (i > j)
-		return ((check_first_line(line, tmp) == -1) ? ft_exit_checking(&line, &tmp) : 1);
+		return (help_check_line(line, tmp));
 	while (*help)
 		*help = (*help)->next;
 	*help = create_help(start, end);
@@ -91,7 +91,7 @@ int				ft_check_format_one(t_help **help,
 	if (ft_get_num(help, line, &i, j) == -1)
 		return (ft_exit_checking(&line, &tmp));
 	if (ft_check_num(*help, tmp) == -1)
-	    return (ft_exit_checking(&line, &tmp));
+		return (ft_exit_checking(&line, &tmp));
 	*help = (tmp == NULL) ? *help : tmp;
 	ft_strdel(&line);
 	return (0);

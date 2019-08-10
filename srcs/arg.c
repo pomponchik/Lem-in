@@ -6,7 +6,7 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/04 20:51:43 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/04 20:52:54 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/10 21:22:52 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int		arg_equal_one(void)
 	return (1);
 }
 
-int     main_error()
+int		main_error(void)
 {
-    ft_putstr("Error");
-    return (-1);
+	ft_putstr("Error");
+	return (-1);
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/02 16:01:50 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/02 19:19:21 by hlarson          ###   ########.fr       */
+/*   Created: 2019/08/10 21:39:36 by hlarson           #+#    #+#             */
+/*   Updated: 2019/08/10 21:40:36 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,73 +32,73 @@ int		get_ant_num(char *line)
 	}
 	ft_strdel(&line);
 	return (n);
-}	
-
-int     ft_get_ant_num(int k, char **line)
-{
-    int     n;
-
-    n = 0;
-    while (get_next_line(k, line) > 0)
-    {
-        if (*line[0] == '#')
-        {
-            if (ft_check_comment_ant(*line) < 0)
-                return (-1);
-        }
-        else
-        {
-            n = get_ant_num(*line);
-            if (n < 0)
-                return (-1);
-            return (n);
-        }
-    }
-    return (-1);
 }
 
-int     ft_get_basic_coord(int k, char **line, t_help **help)
+int		ft_get_ant_num(int k, char **line)
 {
-    int     start;
-    int     end;
-    int     l;
+	int	n;
 
-    start = 0;
-    end = 0;
-    while (get_next_line(k, line) > 0)
-    {
-        if (*line[0] == '#')
-        {
-            if (ft_check_comment(*line, help, &start, &end) < 0)
-                return (-1);
-        }
-        else
-            {
-                if ((l =ft_check_format_one(help, *line, &start, &end)) < 0)
-                    return (-1);
-                if (l == 1)
-                    return (0);
-            }
-    }
-    return (-1);
+	n = 0;
+	while (get_next_line(k, line) > 0)
+	{
+		if (*line[0] == '#')
+		{
+			if (ft_check_comment_ant(*line) < 0)
+				return (-1);
+		}
+		else
+		{
+			n = get_ant_num(*line);
+			if (n < 0)
+				return (-1);
+			return (n);
+		}
+	}
+	return (-1);
 }
 
-int     ft_get_adjacency(char **line, t_graph **graph, int k, size_t *count)
+int		ft_get_basic_coord(int k, char **line, t_help **help)
 {
-    while (get_next_line(k, line) > 0)
-    {
-        if (*line[0] == '#')
-        {
-            if (ft_check_comment_ant(*line) < 0)
-                return (-1);
-        }
-        else
-        {
-            if ((ft_make_adjacency(*line, graph, count)) < 0)
-                return (-1);
-        }
-    }
-    return (0);
+	int	start;
+	int	end;
+	int	l;
+
+	start = 0;
+	end = 0;
+	while (get_next_line(k, line) > 0)
+	{
+		if (*line[0] == '#')
+		{
+			if (ft_check_comment(*line, help, &start, &end) < 0)
+				return (-1);
+		}
+		else
+		{
+			if ((l = ft_check_format_one(help, *line, &start, &end)) < 0)
+				return (-1);
+			if (l == 1)
+				return (0);
+		}
+	}
+	return (-1);
+}
+
+int		ft_get_adjacency(char **line, t_graph **graph, int k, size_t *count)
+{
+	while (get_next_line(k, line) > 0)
+	{
+		if (*line[0] == '#')
+		{
+			if (ft_check_comment_ant(*line) < 0)
+				return (-1);
+		}
+		else
+		{
+			if ((ft_make_adjacency(*line, graph, count)) < 0)
+				return (-1);
+		}
+	}
+	return (0);
 }
 
 int		ft_validate(t_graph **graph, char **argv, size_t *count)
@@ -116,14 +116,14 @@ int		ft_validate(t_graph **graph, char **argv, size_t *count)
 	if (n < 0)
 		return (-1);
 	if (ft_get_basic_coord(k, &line, &help) == -1)
-	    return (-1);
+		return (-1);
 	asd = create_graph(help, n, count);
 	put_first_adjacency(line, &asd, *count);
 	if (ft_get_adjacency(&line, &asd, k, count) == -1)
-	    return (-1);
+		return (-1);
 	ft_strdel(&line);
 	*graph = asd;
 	if (ft_check_adjacency(*graph, *count) < 0)
-	    return (ft_exit_adjacency(graph, count));
+		return (ft_exit_adjacency(graph, count));
 	return (0);
 }

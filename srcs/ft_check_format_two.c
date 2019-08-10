@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_copy_name.c                                     :+:      :+:    :+:   */
+/*   ft_check_format_two.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/02 19:42:27 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/10 21:34:56 by hlarson          ###   ########.fr       */
+/*   Created: 2019/08/10 21:28:46 by hlarson           #+#    #+#             */
+/*   Updated: 2019/08/10 21:33:58 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-char	*ft_copy_name(char *line, int i)
+int		help_check_line(char *line, t_help *tmp)
 {
-	char	*name;
-
-	i--;
-	name = ft_strnew(i);
-	i--;
-	while (i > -1)
-	{
-		name[i] = line[i];
-		i--;
-	}
-	return (name);
+	if (check_first_line(line, tmp) == -1)
+		return (ft_exit_checking(&line, &tmp));
+	return (1);
 }

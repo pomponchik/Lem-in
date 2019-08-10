@@ -6,7 +6,7 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/04 14:48:00 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/04 14:50:07 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/10 21:36:58 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		ft_exit_checking(char **line, t_help **our_list)
 {
 	t_help	*tmp;
-	t_help  *help;
+	t_help	*help;
 
 	help = *our_list;
 	while (help)

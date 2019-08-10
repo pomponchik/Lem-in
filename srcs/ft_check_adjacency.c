@@ -6,7 +6,7 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/10 20:56:26 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/10 21:08:29 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/10 21:24:25 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int		ft_check_adjacency(t_graph *graph, size_t count)
 		{
 			while (temp->next)
 			{
-                temp_two = temp->content;
-                temp_three = temp->next->content;
+				temp_two = temp->content;
+				temp_three = temp->next->content;
 				if (ft_strcmp((*temp_two).name, (*temp_three).name) == 0)
 					return (-1);
 				temp = temp->next;
@@ -35,4 +35,4 @@ int		ft_check_adjacency(t_graph *graph, size_t count)
 		count--;
 	}
 	return (0);
-}	
+}

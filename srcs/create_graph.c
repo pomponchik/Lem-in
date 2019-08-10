@@ -6,7 +6,7 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/02 16:21:12 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/03 20:32:26 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/10 21:23:27 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static size_t		count_elem(t_help *help)
 	return (i);
 }
 
-static void		copy_data_from_help(t_graph *graph, t_help *tmp)
+static void			copy_data_from_help(t_graph *graph, t_help *tmp)
 {
 	(graph)->name = ft_strdup(tmp->name);
 	(graph)->start = tmp->start;
@@ -37,7 +37,7 @@ static void		copy_data_from_help(t_graph *graph, t_help *tmp)
 	(graph)->adjacency = NULL;
 }
 
-t_graph			*create_graph(t_help *help, int n, size_t *count)
+t_graph				*create_graph(t_help *help, int n, size_t *count)
 {
 	t_graph		*graph;
 	t_help		*tmp;
