@@ -86,7 +86,6 @@ int			check_end_elem(t_help *help)
 int			check_first_line(char *line, t_help *help)
 {
 	int		i;
-	int		j;
 	char	*c;
 
 	i = 0;
