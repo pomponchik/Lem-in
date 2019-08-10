@@ -12,24 +12,19 @@
 
 #include "lem_in.h"
 
-int     ft_exit_adjacency(t_graph **graph)
+int     ft_exit_adjacency(t_graph **graph, size_t *count)
 {
-  /*  int     i;
-    t_graph *tmp;
+    t_list  *adjacency;
 
-    i = 0;
-    while (graph[i])
+    while (*count)
     {
-        while (graph[i])
-        {
-            tmp = graph[i]->adjacency;
-            ft_strdel(&(graph[i]->name));
-            free(graph[i]);
-            graph[i] = tmp;
-        }
-        i++;
+        adjacency = ((*graph)[*count - 1]).adjacency;
+        while (adjacency)
+            adjacency = ft_free_and_return(adjacency, adjacency->next);
+        free(((*graph)[*count - 1]).name);
+        *count = *count - 1;
     }
-    free(graph);*/
+    free(*graph);
     return (-1);
 }
 
@@ -40,17 +35,19 @@ int     ft_exit_adjacency_norm(char *c, char *line)
 	return (0);
 }
 
-int     ft_exit_adjacency_error(char *c, char *line, t_graph **graph)
+int     ft_exit_adjacency_error(char *c, char *line, t_graph **graph, size_t *count)
 {
 	ft_strdel(&c);
 	ft_strdel(&line);
-	ft_exit_adjacency(graph);
+	ft_exit_adjacency(graph, count);
+	*count = 0;
 	return (-1);
 }
 
-int     ft_exit_adjacency_error_two(char *line, t_graph **graph)
+int     ft_exit_adjacency_error_two(char *line, t_graph **graph, size_t *count)
 {
     ft_strdel(&line);
-    ft_exit_adjacency(graph);
+    ft_exit_adjacency(graph, count);
+    *count = 0;
     return (-1);
 }

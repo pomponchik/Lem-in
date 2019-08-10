@@ -33,21 +33,6 @@ static size_t get_second_link(char *line,  t_graph *graph, size_t count)
     }
     return (count);
 }
-/*
-static t_graph      *copy_inform(t_graph *graph)
-{
-    t_graph *tmp;
-
-    tmp = (t_graph *)malloc(sizeof(t_graph));
-    tmp->name = ft_strdup(graph->name);
-    tmp->x = graph->x;
-    tmp->end = graph->end;
-    tmp->y = graph->y;
-    tmp->start = graph->start;
-    tmp->ant_number = graph->ant_number;
-    tmp->adjacency = NULL;
-    return (tmp);
-}*/
 
 void        put_first_adjacency(char *line, t_graph **asd, size_t count)
 {
@@ -65,8 +50,8 @@ void        put_first_adjacency(char *line, t_graph **asd, size_t count)
     c = ft_strnew(ft_strlen(line) - i);
     c = ft_strcpy(c, line + i + 1);
     second_link = get_second_link(c, graph, count);
-    (graph[first_link]).adjacency = ft_lstnew(&(graph[second_link]), sizeof(t_graph *));
-    (graph[second_link]).adjacency = ft_lstnew(&(graph[first_link]), sizeof(t_graph *));
+    (graph[first_link]).adjacency = ft_lstnew_no_copy(&(graph[second_link]), sizeof(t_graph));
+    (graph[second_link]).adjacency = ft_lstnew_no_copy(&(graph[first_link]), sizeof(t_graph));
     ft_strdel(&c);
     ft_strdel(&line);
 }

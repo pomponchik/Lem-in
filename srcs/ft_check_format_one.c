@@ -90,6 +90,8 @@ int				ft_check_format_one(t_help **help,
 		return (ft_exit_checking(&line, &tmp));
 	if (ft_get_num(help, line, &i, j) == -1)
 		return (ft_exit_checking(&line, &tmp));
+	if (ft_check_num(*help, tmp) == -1)
+	    return (ft_exit_checking(&line, &tmp));
 	*help = (tmp == NULL) ? *help : tmp;
 	ft_strdel(&line);
 	return (0);

@@ -224,6 +224,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/lem_in_team.dir/srcs/ft_validate.c.o"
   "CMakeFiles/lem_in_team.dir/srcs/main.c.o"
   "CMakeFiles/lem_in_team.dir/srcs/put_first_adjacency.c.o"
+  "CMakeFiles/lem_in_team.dir/srcs/arg.c.o"
+  "CMakeFiles/lem_in_team.dir/srcs/print_adjacency.c.o"
+  "CMakeFiles/lem_in_team.dir/srcs/ft_check_num.c.o"
+  "CMakeFiles/lem_in_team.dir/srcs/ft_check_adjacency.c.o"
   "lem_in_team.pdb"
   "lem_in_team"
 )

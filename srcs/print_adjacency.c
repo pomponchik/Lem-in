@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   arg.c                                              :+:      :+:    :+:   */
+/*   print_adjacency.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/04 20:51:43 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/04 20:52:54 by hlarson          ###   ########.fr       */
+/*   Created: 2019/08/10 20:39:36 by hlarson           #+#    #+#             */
+/*   Updated: 2019/08/10 21:04:19 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-int		arg_equal_one(void)
+void    print_adjacency(t_graph *graph, size_t count)
 {
-	ft_putstr("\n");
-	return (1);
-}
+	t_list *temp;
+	t_graph *temp2;
 
-int     main_error()
-{
-    ft_putstr("Error");
-    return (-1);
+	while (count != 0)
+	{
+		printf("%s->", graph[count - 1].name);
+		temp = (graph[count - 1]).adjacency;
+		while (temp)
+		{
+			temp2 = temp->content;
+			printf("%s->", (*temp2).name);
+			temp = temp->next;
+		}
+		printf("\n");
+		count--;
+	}
 }

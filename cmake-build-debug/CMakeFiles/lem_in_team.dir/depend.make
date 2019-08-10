@@ -636,6 +636,10 @@ CMakeFiles/lem_in_team.dir/Libft/ft_toupper.c.o: ../Libft/ft_toupper.c
 CMakeFiles/lem_in_team.dir/Libft/get_next_line.c.o: ../Libft/includes/libft.h
 CMakeFiles/lem_in_team.dir/Libft/get_next_line.c.o: ../Libft/get_next_line.c
 
+CMakeFiles/lem_in_team.dir/srcs/arg.c.o: ../Libft/includes/libft.h
+CMakeFiles/lem_in_team.dir/srcs/arg.c.o: ../includes/lem_in.h
+CMakeFiles/lem_in_team.dir/srcs/arg.c.o: ../srcs/arg.c
+
 CMakeFiles/lem_in_team.dir/srcs/check_first_line.c.o: ../Libft/includes/libft.h
 CMakeFiles/lem_in_team.dir/srcs/check_first_line.c.o: ../includes/lem_in.h
 CMakeFiles/lem_in_team.dir/srcs/check_first_line.c.o: ../srcs/check_first_line.c
@@ -652,6 +656,10 @@ CMakeFiles/lem_in_team.dir/srcs/create_help.c.o: ../Libft/includes/libft.h
 CMakeFiles/lem_in_team.dir/srcs/create_help.c.o: ../includes/lem_in.h
 CMakeFiles/lem_in_team.dir/srcs/create_help.c.o: ../srcs/create_help.c
 
+CMakeFiles/lem_in_team.dir/srcs/ft_check_adjacency.c.o: ../Libft/includes/libft.h
+CMakeFiles/lem_in_team.dir/srcs/ft_check_adjacency.c.o: ../includes/lem_in.h
+CMakeFiles/lem_in_team.dir/srcs/ft_check_adjacency.c.o: ../srcs/ft_check_adjacency.c
+
 CMakeFiles/lem_in_team.dir/srcs/ft_check_comment.c.o: ../Libft/includes/libft.h
 CMakeFiles/lem_in_team.dir/srcs/ft_check_comment.c.o: ../includes/lem_in.h
 CMakeFiles/lem_in_team.dir/srcs/ft_check_comment.c.o: ../srcs/ft_check_comment.c
@@ -659,6 +667,10 @@ CMakeFiles/lem_in_team.dir/srcs/ft_check_comment.c.o: ../srcs/ft_check_comment.c
 CMakeFiles/lem_in_team.dir/srcs/ft_check_format_one.c.o: ../Libft/includes/libft.h
 CMakeFiles/lem_in_team.dir/srcs/ft_check_format_one.c.o: ../includes/lem_in.h
 CMakeFiles/lem_in_team.dir/srcs/ft_check_format_one.c.o: ../srcs/ft_check_format_one.c
+
+CMakeFiles/lem_in_team.dir/srcs/ft_check_num.c.o: ../Libft/includes/libft.h
+CMakeFiles/lem_in_team.dir/srcs/ft_check_num.c.o: ../includes/lem_in.h
+CMakeFiles/lem_in_team.dir/srcs/ft_check_num.c.o: ../srcs/ft_check_num.c
 
 CMakeFiles/lem_in_team.dir/srcs/ft_copy_name.c.o: ../Libft/includes/libft.h
 CMakeFiles/lem_in_team.dir/srcs/ft_copy_name.c.o: ../includes/lem_in.h
@@ -683,6 +695,10 @@ CMakeFiles/lem_in_team.dir/srcs/ft_validate.c.o: ../srcs/ft_validate.c
 CMakeFiles/lem_in_team.dir/srcs/main.c.o: ../Libft/includes/libft.h
 CMakeFiles/lem_in_team.dir/srcs/main.c.o: ../includes/lem_in.h
 CMakeFiles/lem_in_team.dir/srcs/main.c.o: ../srcs/main.c
+
+CMakeFiles/lem_in_team.dir/srcs/print_adjacency.c.o: ../Libft/includes/libft.h
+CMakeFiles/lem_in_team.dir/srcs/print_adjacency.c.o: ../includes/lem_in.h
+CMakeFiles/lem_in_team.dir/srcs/print_adjacency.c.o: ../srcs/print_adjacency.c
 
 CMakeFiles/lem_in_team.dir/srcs/put_first_adjacency.c.o: ../Libft/includes/libft.h
 CMakeFiles/lem_in_team.dir/srcs/put_first_adjacency.c.o: ../includes/lem_in.h

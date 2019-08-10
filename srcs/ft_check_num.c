@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   arg.c                                              :+:      :+:    :+:   */
+/*   ft_check_num.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/04 20:51:43 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/04 20:52:54 by hlarson          ###   ########.fr       */
+/*   Created: 2019/08/10 20:46:25 by hlarson           #+#    #+#             */
+/*   Updated: 2019/08/10 20:47:49 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-int		arg_equal_one(void)
+int		ft_check_num(t_help *help, t_help *tmp)
 {
-	ft_putstr("\n");
-	return (1);
-}
-
-int     main_error()
-{
-    ft_putstr("Error");
-    return (-1);
+	if (!tmp)
+		return (0);
+	while (tmp->next)
+	{
+		if (tmp->x == help->x && tmp->y == help->y)
+			return (-1);
+		tmp = tmp->next;
+	}
+	return (0);
 }

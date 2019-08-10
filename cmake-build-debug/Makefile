@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/alexander/CLion/CLion-2019.1.4/clion-2019.1.4/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Users/hlarson/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /home/alexander/CLion/CLion-2019.1.4/clion-2019.1.4/bin/cmake/linux/bin/cmake -E remove -f
+RM = /Users/hlarson/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alexander/lem_in
+CMAKE_SOURCE_DIR = /Users/hlarson/lem_team
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alexander/lem_in/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/hlarson/lem_team/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/alexander/lem_in/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/alexander/CLion/CLion-2019.1.4/clion-2019.1.4/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Users/hlarson/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/alexander/CLion/CLion-2019.1.4/clion-2019.1.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Users/hlarson/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/lem_in/cmake-build-debug/CMakeFiles /home/alexander/lem_in/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hlarson/lem_team/cmake-build-debug/CMakeFiles /Users/hlarson/lem_team/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/lem_in/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hlarson/lem_team/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -5847,6 +5847,33 @@ Libft/get_next_line.c.s:
 	$(MAKE) -f CMakeFiles/lem_in_team.dir/build.make CMakeFiles/lem_in_team.dir/Libft/get_next_line.c.s
 .PHONY : Libft/get_next_line.c.s
 
+srcs/arg.o: srcs/arg.c.o
+
+.PHONY : srcs/arg.o
+
+# target to build an object file
+srcs/arg.c.o:
+	$(MAKE) -f CMakeFiles/lem_in_team.dir/build.make CMakeFiles/lem_in_team.dir/srcs/arg.c.o
+.PHONY : srcs/arg.c.o
+
+srcs/arg.i: srcs/arg.c.i
+
+.PHONY : srcs/arg.i
+
+# target to preprocess a source file
+srcs/arg.c.i:
+	$(MAKE) -f CMakeFiles/lem_in_team.dir/build.make CMakeFiles/lem_in_team.dir/srcs/arg.c.i
+.PHONY : srcs/arg.c.i
+
+srcs/arg.s: srcs/arg.c.s
+
+.PHONY : srcs/arg.s
+
+# target to generate assembly for a file
+srcs/arg.c.s:
+	$(MAKE) -f CMakeFiles/lem_in_team.dir/build.make CMakeFiles/lem_in_team.dir/srcs/arg.c.s
+.PHONY : srcs/arg.c.s
+
 srcs/check_first_line.o: srcs/check_first_line.c.o
 
 .PHONY : srcs/check_first_line.o
@@ -5955,6 +5982,33 @@ srcs/create_help.c.s:
 	$(MAKE) -f CMakeFiles/lem_in_team.dir/build.make CMakeFiles/lem_in_team.dir/srcs/create_help.c.s
 .PHONY : srcs/create_help.c.s
 
+srcs/ft_check_adjacency.o: srcs/ft_check_adjacency.c.o
+
+.PHONY : srcs/ft_check_adjacency.o
+
+# target to build an object file
+srcs/ft_check_adjacency.c.o:
+	$(MAKE) -f CMakeFiles/lem_in_team.dir/build.make CMakeFiles/lem_in_team.dir/srcs/ft_check_adjacency.c.o
+.PHONY : srcs/ft_check_adjacency.c.o
+
+srcs/ft_check_adjacency.i: srcs/ft_check_adjacency.c.i
+
+.PHONY : srcs/ft_check_adjacency.i
+
+# target to preprocess a source file
+srcs/ft_check_adjacency.c.i:
+	$(MAKE) -f CMakeFiles/lem_in_team.dir/build.make CMakeFiles/lem_in_team.dir/srcs/ft_check_adjacency.c.i
+.PHONY : srcs/ft_check_adjacency.c.i
+
+srcs/ft_check_adjacency.s: srcs/ft_check_adjacency.c.s
+
+.PHONY : srcs/ft_check_adjacency.s
+
+# target to generate assembly for a file
+srcs/ft_check_adjacency.c.s:
+	$(MAKE) -f CMakeFiles/lem_in_team.dir/build.make CMakeFiles/lem_in_team.dir/srcs/ft_check_adjacency.c.s
+.PHONY : srcs/ft_check_adjacency.c.s
+
 srcs/ft_check_comment.o: srcs/ft_check_comment.c.o
 
 .PHONY : srcs/ft_check_comment.o
@@ -6008,6 +6062,33 @@ srcs/ft_check_format_one.s: srcs/ft_check_format_one.c.s
 srcs/ft_check_format_one.c.s:
 	$(MAKE) -f CMakeFiles/lem_in_team.dir/build.make CMakeFiles/lem_in_team.dir/srcs/ft_check_format_one.c.s
 .PHONY : srcs/ft_check_format_one.c.s
+
+srcs/ft_check_num.o: srcs/ft_check_num.c.o
+
+.PHONY : srcs/ft_check_num.o
+
+# target to build an object file
+srcs/ft_check_num.c.o:
+	$(MAKE) -f CMakeFiles/lem_in_team.dir/build.make CMakeFiles/lem_in_team.dir/srcs/ft_check_num.c.o
+.PHONY : srcs/ft_check_num.c.o
+
+srcs/ft_check_num.i: srcs/ft_check_num.c.i
+
+.PHONY : srcs/ft_check_num.i
+
+# target to preprocess a source file
+srcs/ft_check_num.c.i:
+	$(MAKE) -f CMakeFiles/lem_in_team.dir/build.make CMakeFiles/lem_in_team.dir/srcs/ft_check_num.c.i
+.PHONY : srcs/ft_check_num.c.i
+
+srcs/ft_check_num.s: srcs/ft_check_num.c.s
+
+.PHONY : srcs/ft_check_num.s
+
+# target to generate assembly for a file
+srcs/ft_check_num.c.s:
+	$(MAKE) -f CMakeFiles/lem_in_team.dir/build.make CMakeFiles/lem_in_team.dir/srcs/ft_check_num.c.s
+.PHONY : srcs/ft_check_num.c.s
 
 srcs/ft_copy_name.o: srcs/ft_copy_name.c.o
 
@@ -6171,6 +6252,33 @@ srcs/main.c.s:
 	$(MAKE) -f CMakeFiles/lem_in_team.dir/build.make CMakeFiles/lem_in_team.dir/srcs/main.c.s
 .PHONY : srcs/main.c.s
 
+srcs/print_adjacency.o: srcs/print_adjacency.c.o
+
+.PHONY : srcs/print_adjacency.o
+
+# target to build an object file
+srcs/print_adjacency.c.o:
+	$(MAKE) -f CMakeFiles/lem_in_team.dir/build.make CMakeFiles/lem_in_team.dir/srcs/print_adjacency.c.o
+.PHONY : srcs/print_adjacency.c.o
+
+srcs/print_adjacency.i: srcs/print_adjacency.c.i
+
+.PHONY : srcs/print_adjacency.i
+
+# target to preprocess a source file
+srcs/print_adjacency.c.i:
+	$(MAKE) -f CMakeFiles/lem_in_team.dir/build.make CMakeFiles/lem_in_team.dir/srcs/print_adjacency.c.i
+.PHONY : srcs/print_adjacency.c.i
+
+srcs/print_adjacency.s: srcs/print_adjacency.c.s
+
+.PHONY : srcs/print_adjacency.s
+
+# target to generate assembly for a file
+srcs/print_adjacency.c.s:
+	$(MAKE) -f CMakeFiles/lem_in_team.dir/build.make CMakeFiles/lem_in_team.dir/srcs/print_adjacency.c.s
+.PHONY : srcs/print_adjacency.c.s
+
 srcs/put_first_adjacency.o: srcs/put_first_adjacency.c.o
 
 .PHONY : srcs/put_first_adjacency.o
@@ -6205,8 +6313,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... lem_in_team"
 	@echo "... edit_cache"
+	@echo "... lem_in_team"
 	@echo "... Libft/ft_atoi.o"
 	@echo "... Libft/ft_atoi.i"
 	@echo "... Libft/ft_atoi.s"
@@ -6843,6 +6951,9 @@ help:
 	@echo "... Libft/get_next_line.o"
 	@echo "... Libft/get_next_line.i"
 	@echo "... Libft/get_next_line.s"
+	@echo "... srcs/arg.o"
+	@echo "... srcs/arg.i"
+	@echo "... srcs/arg.s"
 	@echo "... srcs/check_first_line.o"
 	@echo "... srcs/check_first_line.i"
 	@echo "... srcs/check_first_line.s"
@@ -6855,12 +6966,18 @@ help:
 	@echo "... srcs/create_help.o"
 	@echo "... srcs/create_help.i"
 	@echo "... srcs/create_help.s"
+	@echo "... srcs/ft_check_adjacency.o"
+	@echo "... srcs/ft_check_adjacency.i"
+	@echo "... srcs/ft_check_adjacency.s"
 	@echo "... srcs/ft_check_comment.o"
 	@echo "... srcs/ft_check_comment.i"
 	@echo "... srcs/ft_check_comment.s"
 	@echo "... srcs/ft_check_format_one.o"
 	@echo "... srcs/ft_check_format_one.i"
 	@echo "... srcs/ft_check_format_one.s"
+	@echo "... srcs/ft_check_num.o"
+	@echo "... srcs/ft_check_num.i"
+	@echo "... srcs/ft_check_num.s"
 	@echo "... srcs/ft_copy_name.o"
 	@echo "... srcs/ft_copy_name.i"
 	@echo "... srcs/ft_copy_name.s"
@@ -6879,6 +6996,9 @@ help:
 	@echo "... srcs/main.o"
 	@echo "... srcs/main.i"
 	@echo "... srcs/main.s"
+	@echo "... srcs/print_adjacency.o"
+	@echo "... srcs/print_adjacency.i"
+	@echo "... srcs/print_adjacency.s"
 	@echo "... srcs/put_first_adjacency.o"
 	@echo "... srcs/put_first_adjacency.i"
 	@echo "... srcs/put_first_adjacency.s"

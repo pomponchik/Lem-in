@@ -48,11 +48,16 @@ t_help				*create_help(int *start, int *end);
 void                add_help(t_help *tmp, t_help *help);
 char				*ft_copy_name(char *line, int i);
 void                put_first_adjacency(char *line, t_graph **graph, size_t count);
-int                 ft_make_adjacency(char *line, t_graph **graph, size_t count);
+int                 ft_make_adjacency(char *line, t_graph **graph, size_t *count);
 int		            ft_exit_checking(char **line, t_help **help);
-//int                 ft_exit_adjacency(t_graph **graph);
 int                 ft_exit_adjacency_norm(char *c, char *line);
-int                 ft_exit_adjacency_error(char *c, char *line, t_graph **graph);
-int                 ft_exit_adjacency_error_two(char *line, t_graph **graph);
+int                 ft_exit_adjacency_error(char *c, char *line, t_graph **graph, size_t *count);
+int                 ft_exit_adjacency_error_two(char *line, t_graph **graph, size_t *count);
+int                 arg_equal_one(void);
+void                print_adjacency(t_graph *graph, size_t count);
+int                 ft_check_num(t_help *help, t_help *tmp);
+int                 main_error();
+int                 ft_check_adjacency(t_graph *graph, size_t count);
+int                 ft_exit_adjacency(t_graph **graph, size_t *count);
 
 #endif

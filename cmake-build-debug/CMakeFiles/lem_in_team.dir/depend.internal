@@ -3,688 +3,704 @@
 
 CMakeFiles/lem_in_team.dir/Libft/ft_atoi.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_atoi.c
+ /Users/hlarson/lem_team/Libft/ft_atoi.c
 CMakeFiles/lem_in_team.dir/Libft/ft_atoi_llu.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_atoi_llu.c
+ /Users/hlarson/lem_team/Libft/ft_atoi_llu.c
 CMakeFiles/lem_in_team.dir/Libft/ft_bits_copy.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_bits_copy.c
+ /Users/hlarson/lem_team/Libft/ft_bits_copy.c
 CMakeFiles/lem_in_team.dir/Libft/ft_bits_filler.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_bits_filler.c
+ /Users/hlarson/lem_team/Libft/ft_bits_filler.c
 CMakeFiles/lem_in_team.dir/Libft/ft_bits_listing.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_bits_listing.c
+ /Users/hlarson/lem_team/Libft/ft_bits_listing.c
 CMakeFiles/lem_in_team.dir/Libft/ft_bits_print.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_bits_print.c
+ /Users/hlarson/lem_team/Libft/ft_bits_print.c
 CMakeFiles/lem_in_team.dir/Libft/ft_bits_read_bit.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_bits_read_bit.c
+ /Users/hlarson/lem_team/Libft/ft_bits_read_bit.c
 CMakeFiles/lem_in_team.dir/Libft/ft_bits_reverse_bits_in_byte.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_bits_reverse_bits_in_byte.c
+ /Users/hlarson/lem_team/Libft/ft_bits_reverse_bits_in_byte.c
 CMakeFiles/lem_in_team.dir/Libft/ft_bits_reverse_bits_in_bytes.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_bits_reverse_bits_in_bytes.c
+ /Users/hlarson/lem_team/Libft/ft_bits_reverse_bits_in_bytes.c
 CMakeFiles/lem_in_team.dir/Libft/ft_bits_reverse_memory.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_bits_reverse_memory.c
+ /Users/hlarson/lem_team/Libft/ft_bits_reverse_memory.c
 CMakeFiles/lem_in_team.dir/Libft/ft_bits_shift.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_bits_shift.c
+ /Users/hlarson/lem_team/Libft/ft_bits_shift.c
 CMakeFiles/lem_in_team.dir/Libft/ft_bits_shift_left.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_bits_shift_left.c
+ /Users/hlarson/lem_team/Libft/ft_bits_shift_left.c
 CMakeFiles/lem_in_team.dir/Libft/ft_bits_shift_right.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_bits_shift_right.c
+ /Users/hlarson/lem_team/Libft/ft_bits_shift_right.c
 CMakeFiles/lem_in_team.dir/Libft/ft_bits_write_bit.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_bits_write_bit.c
+ /Users/hlarson/lem_team/Libft/ft_bits_write_bit.c
 CMakeFiles/lem_in_team.dir/Libft/ft_bzero.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_bzero.c
+ /Users/hlarson/lem_team/Libft/ft_bzero.c
 CMakeFiles/lem_in_team.dir/Libft/ft_free.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_free.c
+ /Users/hlarson/lem_team/Libft/ft_free.c
 CMakeFiles/lem_in_team.dir/Libft/ft_free_and_return.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_free_and_return.c
+ /Users/hlarson/lem_team/Libft/ft_free_and_return.c
 CMakeFiles/lem_in_team.dir/Libft/ft_free_both.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_free_both.c
+ /Users/hlarson/lem_team/Libft/ft_free_both.c
 CMakeFiles/lem_in_team.dir/Libft/ft_free_two_dimensional_array.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_free_two_dimensional_array.c
+ /Users/hlarson/lem_team/Libft/ft_free_two_dimensional_array.c
 CMakeFiles/lem_in_team.dir/Libft/ft_get_all_files.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_get_all_files.c
+ /Users/hlarson/lem_team/Libft/ft_get_all_files.c
 CMakeFiles/lem_in_team.dir/Libft/ft_get_all_files_free.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_get_all_files_free.c
+ /Users/hlarson/lem_team/Libft/ft_get_all_files_free.c
 CMakeFiles/lem_in_team.dir/Libft/ft_get_arguments_command_line.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_get_arguments_command_line.c
+ /Users/hlarson/lem_team/Libft/ft_get_arguments_command_line.c
 CMakeFiles/lem_in_team.dir/Libft/ft_get_file.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_get_file.c
+ /Users/hlarson/lem_team/Libft/ft_get_file.c
 CMakeFiles/lem_in_team.dir/Libft/ft_isalnum.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_isalnum.c
+ /Users/hlarson/lem_team/Libft/ft_isalnum.c
 CMakeFiles/lem_in_team.dir/Libft/ft_isalpha.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_isalpha.c
+ /Users/hlarson/lem_team/Libft/ft_isalpha.c
 CMakeFiles/lem_in_team.dir/Libft/ft_isascii.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_isascii.c
+ /Users/hlarson/lem_team/Libft/ft_isascii.c
 CMakeFiles/lem_in_team.dir/Libft/ft_isdigit.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_isdigit.c
+ /Users/hlarson/lem_team/Libft/ft_isdigit.c
 CMakeFiles/lem_in_team.dir/Libft/ft_isprint.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_isprint.c
+ /Users/hlarson/lem_team/Libft/ft_isprint.c
 CMakeFiles/lem_in_team.dir/Libft/ft_issign.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_issign.c
+ /Users/hlarson/lem_team/Libft/ft_issign.c
 CMakeFiles/lem_in_team.dir/Libft/ft_issorted.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_issorted.c
+ /Users/hlarson/lem_team/Libft/ft_issorted.c
 CMakeFiles/lem_in_team.dir/Libft/ft_isspace.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_isspace.c
+ /Users/hlarson/lem_team/Libft/ft_isspace.c
 CMakeFiles/lem_in_team.dir/Libft/ft_itoa.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_itoa.c
+ /Users/hlarson/lem_team/Libft/ft_itoa.c
 CMakeFiles/lem_in_team.dir/Libft/ft_itoa_double.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_itoa_double.c
+ /Users/hlarson/lem_team/Libft/ft_itoa_double.c
 CMakeFiles/lem_in_team.dir/Libft/ft_itoa_float.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_itoa_float.c
+ /Users/hlarson/lem_team/Libft/ft_itoa_float.c
 CMakeFiles/lem_in_team.dir/Libft/ft_itoa_llu.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_itoa_llu.c
+ /Users/hlarson/lem_team/Libft/ft_itoa_llu.c
 CMakeFiles/lem_in_team.dir/Libft/ft_itoa_long.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_itoa_long.c
+ /Users/hlarson/lem_team/Libft/ft_itoa_long.c
 CMakeFiles/lem_in_team.dir/Libft/ft_itoa_long_double_old.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_itoa_long_double_old.c
+ /Users/hlarson/lem_team/Libft/ft_itoa_long_double_old.c
 CMakeFiles/lem_in_team.dir/Libft/ft_itoa_long_double_wrapper.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_itoa_long_double_wrapper.c
+ /Users/hlarson/lem_team/Libft/ft_itoa_long_double_wrapper.c
 CMakeFiles/lem_in_team.dir/Libft/ft_itoa_long_long.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_itoa_long_long.c
+ /Users/hlarson/lem_team/Libft/ft_itoa_long_long.c
 CMakeFiles/lem_in_team.dir/Libft/ft_jump.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_jump.c
+ /Users/hlarson/lem_team/Libft/ft_jump.c
 CMakeFiles/lem_in_team.dir/Libft/ft_jump_pointer_to_n.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_jump_pointer_to_n.c
+ /Users/hlarson/lem_team/Libft/ft_jump_pointer_to_n.c
 CMakeFiles/lem_in_team.dir/Libft/ft_letter_replacement.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_letter_replacement.c
+ /Users/hlarson/lem_team/Libft/ft_letter_replacement.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_all_content_size.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_all_content_size.c
+ /Users/hlarson/lem_team/Libft/ft_lst_all_content_size.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_chain_len.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_chain_len.c
+ /Users/hlarson/lem_team/Libft/ft_lst_chain_len.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_copy_chain.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_copy_chain.c
+ /Users/hlarson/lem_team/Libft/ft_lst_copy_chain.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_cut.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_cut.c
+ /Users/hlarson/lem_team/Libft/ft_lst_cut.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_cut_numbers.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_cut_numbers.c
+ /Users/hlarson/lem_team/Libft/ft_lst_cut_numbers.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_deduplication.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_deduplication.c
+ /Users/hlarson/lem_team/Libft/ft_lst_deduplication.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_free_chain.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_free_chain.c
+ /Users/hlarson/lem_team/Libft/ft_lst_free_chain.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_get_end.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_get_end.c
+ /Users/hlarson/lem_team/Libft/ft_lst_get_end.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_join.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_join.c
+ /Users/hlarson/lem_team/Libft/ft_lst_join.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_monolith_convert_to_monolith.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_monolith_convert_to_monolith.c
+ /Users/hlarson/lem_team/Libft/ft_lst_monolith_convert_to_monolith.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_monolith_from_array.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_monolith_from_array.c
+ /Users/hlarson/lem_team/Libft/ft_lst_monolith_from_array.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_monolith_its_monolith.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_monolith_its_monolith.c
+ /Users/hlarson/lem_team/Libft/ft_lst_monolith_its_monolith.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_monolith_join_chains.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_monolith_join_chains.c
+ /Users/hlarson/lem_team/Libft/ft_lst_monolith_join_chains.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_monolith_lstnew.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_monolith_lstnew.c
+ /Users/hlarson/lem_team/Libft/ft_lst_monolith_lstnew.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_monolith_sort_quick.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_monolith_sort_quick.c
+ /Users/hlarson/lem_team/Libft/ft_lst_monolith_sort_quick.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_putstr_free.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_putstr_free.c
+ /Users/hlarson/lem_team/Libft/ft_lst_putstr_free.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_putstr_free_cs.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_putstr_free_cs.c
+ /Users/hlarson/lem_team/Libft/ft_lst_putstr_free_cs.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_putstr_sep.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_putstr_sep.c
+ /Users/hlarson/lem_team/Libft/ft_lst_putstr_sep.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_putstr_sep_free.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_putstr_sep_free.c
+ /Users/hlarson/lem_team/Libft/ft_lst_putstr_sep_free.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_sort_quick.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_sort_quick.c
+ /Users/hlarson/lem_team/Libft/ft_lst_sort_quick.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_stack_empty_stack_num.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_stack_empty_stack_num.c
+ /Users/hlarson/lem_team/Libft/ft_lst_stack_empty_stack_num.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_stack_empty_stack_num_tightly.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_stack_empty_stack_num_tightly.c
+ /Users/hlarson/lem_team/Libft/ft_lst_stack_empty_stack_num_tightly.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_stack_is_empty.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_stack_is_empty.c
+ /Users/hlarson/lem_team/Libft/ft_lst_stack_is_empty.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_stack_keep_stacks.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_stack_keep_stacks.c
+ /Users/hlarson/lem_team/Libft/ft_lst_stack_keep_stacks.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_stack_new_stack.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_stack_new_stack.c
+ /Users/hlarson/lem_team/Libft/ft_lst_stack_new_stack.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_stack_pop.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_stack_pop.c
+ /Users/hlarson/lem_team/Libft/ft_lst_stack_pop.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_stack_push.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_stack_push.c
+ /Users/hlarson/lem_team/Libft/ft_lst_stack_push.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_stack_push_back.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_stack_push_back.c
+ /Users/hlarson/lem_team/Libft/ft_lst_stack_push_back.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_stack_size.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_stack_size.c
+ /Users/hlarson/lem_team/Libft/ft_lst_stack_size.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_stack_top.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_stack_top.c
+ /Users/hlarson/lem_team/Libft/ft_lst_stack_top.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_stack_turn.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_stack_turn.c
+ /Users/hlarson/lem_team/Libft/ft_lst_stack_turn.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_strjoin.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_strjoin.c
+ /Users/hlarson/lem_team/Libft/ft_lst_strjoin.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_strjoin_counter_out.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_strjoin_counter_out.c
+ /Users/hlarson/lem_team/Libft/ft_lst_strjoin_counter_out.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_strjoin_counter_out_cs.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_strjoin_counter_out_cs.c
+ /Users/hlarson/lem_team/Libft/ft_lst_strjoin_counter_out_cs.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_strjoin_counter_out_free.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_strjoin_counter_out_free.c
+ /Users/hlarson/lem_team/Libft/ft_lst_strjoin_counter_out_free.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_strjoin_counter_out_free_cs.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_strjoin_counter_out_free_cs.c
+ /Users/hlarson/lem_team/Libft/ft_lst_strjoin_counter_out_free_cs.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_strjoin_cs.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_strjoin_cs.c
+ /Users/hlarson/lem_team/Libft/ft_lst_strjoin_cs.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_strjoin_free.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_strjoin_free.c
+ /Users/hlarson/lem_team/Libft/ft_lst_strjoin_free.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_strjoin_free_cs.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_strjoin_free_cs.c
+ /Users/hlarson/lem_team/Libft/ft_lst_strjoin_free_cs.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_strjoin_sep.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_strjoin_sep.c
+ /Users/hlarson/lem_team/Libft/ft_lst_strjoin_sep.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_strjoin_sep_counter_out.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_strjoin_sep_counter_out.c
+ /Users/hlarson/lem_team/Libft/ft_lst_strjoin_sep_counter_out.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_strjoin_sep_counter_out_free.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_strjoin_sep_counter_out_free.c
+ /Users/hlarson/lem_team/Libft/ft_lst_strjoin_sep_counter_out_free.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_strjoin_sep_free.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_strjoin_sep_free.c
+ /Users/hlarson/lem_team/Libft/ft_lst_strjoin_sep_free.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_strlen.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_strlen.c
+ /Users/hlarson/lem_team/Libft/ft_lst_strlen.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_strnew.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_strnew.c
+ /Users/hlarson/lem_team/Libft/ft_lst_strnew.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_to_array.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_to_array.c
+ /Users/hlarson/lem_team/Libft/ft_lst_to_array.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_to_array_free.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_to_array_free.c
+ /Users/hlarson/lem_team/Libft/ft_lst_to_array_free.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_to_array_nullterm.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_to_array_nullterm.c
+ /Users/hlarson/lem_team/Libft/ft_lst_to_array_nullterm.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_to_array_nullterm_free.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_to_array_nullterm_free.c
+ /Users/hlarson/lem_team/Libft/ft_lst_to_array_nullterm_free.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_turn.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_turn.c
+ /Users/hlarson/lem_team/Libft/ft_lst_turn.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_unit_transfer.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_unit_transfer.c
+ /Users/hlarson/lem_team/Libft/ft_lst_unit_transfer.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lst_unit_transfer_with_malloc.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lst_unit_transfer_with_malloc.c
+ /Users/hlarson/lem_team/Libft/ft_lst_unit_transfer_with_malloc.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lstadd.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lstadd.c
+ /Users/hlarson/lem_team/Libft/ft_lstadd.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lstadd_to_end.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lstadd_to_end.c
+ /Users/hlarson/lem_team/Libft/ft_lstadd_to_end.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lstdel.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lstdel.c
+ /Users/hlarson/lem_team/Libft/ft_lstdel.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lstdel_complite.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lstdel_complite.c
+ /Users/hlarson/lem_team/Libft/ft_lstdel_complite.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lstdelone.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lstdelone.c
+ /Users/hlarson/lem_team/Libft/ft_lstdelone.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lstiter.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lstiter.c
+ /Users/hlarson/lem_team/Libft/ft_lstiter.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lstmap.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lstmap.c
+ /Users/hlarson/lem_team/Libft/ft_lstmap.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lstnew.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lstnew.c
+ /Users/hlarson/lem_team/Libft/ft_lstnew.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lstnew_no_copy.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lstnew_no_copy.c
+ /Users/hlarson/lem_team/Libft/ft_lstnew_no_copy.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lstsearch_content.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lstsearch_content.c
+ /Users/hlarson/lem_team/Libft/ft_lstsearch_content.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lstsearch_cs.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lstsearch_cs.c
+ /Users/hlarson/lem_team/Libft/ft_lstsearch_cs.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lstsearch_cs_del.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lstsearch_cs_del.c
+ /Users/hlarson/lem_team/Libft/ft_lstsearch_cs_del.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lstsearch_cs_replace.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lstsearch_cs_replace.c
+ /Users/hlarson/lem_team/Libft/ft_lstsearch_cs_replace.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lstsearch_index.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lstsearch_index.c
+ /Users/hlarson/lem_team/Libft/ft_lstsearch_index.c
 CMakeFiles/lem_in_team.dir/Libft/ft_lstsearch_str_content.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_lstsearch_str_content.c
+ /Users/hlarson/lem_team/Libft/ft_lstsearch_str_content.c
 CMakeFiles/lem_in_team.dir/Libft/ft_math_long_double_normilize.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_math_long_double_normilize.c
+ /Users/hlarson/lem_team/Libft/ft_math_long_double_normilize.c
 CMakeFiles/lem_in_team.dir/Libft/ft_math_longar_str_add.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_math_longar_str_add.c
+ /Users/hlarson/lem_team/Libft/ft_math_longar_str_add.c
 CMakeFiles/lem_in_team.dir/Libft/ft_math_longar_str_add_free_1.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_math_longar_str_add_free_1.c
+ /Users/hlarson/lem_team/Libft/ft_math_longar_str_add_free_1.c
 CMakeFiles/lem_in_team.dir/Libft/ft_math_longar_str_add_free_both.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_math_longar_str_add_free_both.c
+ /Users/hlarson/lem_team/Libft/ft_math_longar_str_add_free_both.c
 CMakeFiles/lem_in_team.dir/Libft/ft_math_longar_str_comparison.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_math_longar_str_comparison.c
+ /Users/hlarson/lem_team/Libft/ft_math_longar_str_comparison.c
 CMakeFiles/lem_in_team.dir/Libft/ft_math_longar_str_division.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_math_longar_str_division.c
+ /Users/hlarson/lem_team/Libft/ft_math_longar_str_division.c
 CMakeFiles/lem_in_team.dir/Libft/ft_math_longar_str_exponent_mix.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_math_longar_str_exponent_mix.c
+ /Users/hlarson/lem_team/Libft/ft_math_longar_str_exponent_mix.c
 CMakeFiles/lem_in_team.dir/Libft/ft_math_longar_str_exponent_mix_free.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_math_longar_str_exponent_mix_free.c
+ /Users/hlarson/lem_team/Libft/ft_math_longar_str_exponent_mix_free.c
 CMakeFiles/lem_in_team.dir/Libft/ft_math_longar_str_multi.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_math_longar_str_multi.c
+ /Users/hlarson/lem_team/Libft/ft_math_longar_str_multi.c
 CMakeFiles/lem_in_team.dir/Libft/ft_math_longar_str_multi_free_1.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_math_longar_str_multi_free_1.c
+ /Users/hlarson/lem_team/Libft/ft_math_longar_str_multi_free_1.c
 CMakeFiles/lem_in_team.dir/Libft/ft_math_longar_str_multi_free_both.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_math_longar_str_multi_free_both.c
+ /Users/hlarson/lem_team/Libft/ft_math_longar_str_multi_free_both.c
 CMakeFiles/lem_in_team.dir/Libft/ft_math_longar_str_remainder_of_division.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_math_longar_str_remainder_of_division.c
+ /Users/hlarson/lem_team/Libft/ft_math_longar_str_remainder_of_division.c
 CMakeFiles/lem_in_team.dir/Libft/ft_math_longar_str_subtraction.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_math_longar_str_subtraction.c
+ /Users/hlarson/lem_team/Libft/ft_math_longar_str_subtraction.c
 CMakeFiles/lem_in_team.dir/Libft/ft_math_module_int.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_math_module_int.c
+ /Users/hlarson/lem_team/Libft/ft_math_module_int.c
 CMakeFiles/lem_in_team.dir/Libft/ft_math_numlen_long.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_math_numlen_long.c
+ /Users/hlarson/lem_team/Libft/ft_math_numlen_long.c
 CMakeFiles/lem_in_team.dir/Libft/ft_math_numlen_long_double.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_math_numlen_long_double.c
+ /Users/hlarson/lem_team/Libft/ft_math_numlen_long_double.c
 CMakeFiles/lem_in_team.dir/Libft/ft_math_root.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_math_root.c
+ /Users/hlarson/lem_team/Libft/ft_math_root.c
 CMakeFiles/lem_in_team.dir/Libft/ft_math_rounding_down_double.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_math_rounding_down_double.c
+ /Users/hlarson/lem_team/Libft/ft_math_rounding_down_double.c
 CMakeFiles/lem_in_team.dir/Libft/ft_math_rounding_down_float.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_math_rounding_down_float.c
+ /Users/hlarson/lem_team/Libft/ft_math_rounding_down_float.c
 CMakeFiles/lem_in_team.dir/Libft/ft_math_rounding_down_l_double.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_math_rounding_down_l_double.c
+ /Users/hlarson/lem_team/Libft/ft_math_rounding_down_l_double.c
 CMakeFiles/lem_in_team.dir/Libft/ft_maxmin.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_maxmin.c
+ /Users/hlarson/lem_team/Libft/ft_maxmin.c
 CMakeFiles/lem_in_team.dir/Libft/ft_mem_reverse.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_mem_reverse.c
+ /Users/hlarson/lem_team/Libft/ft_mem_reverse.c
 CMakeFiles/lem_in_team.dir/Libft/ft_memalloc.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_memalloc.c
+ /Users/hlarson/lem_team/Libft/ft_memalloc.c
 CMakeFiles/lem_in_team.dir/Libft/ft_memccpy.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_memccpy.c
+ /Users/hlarson/lem_team/Libft/ft_memccpy.c
 CMakeFiles/lem_in_team.dir/Libft/ft_memchr.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_memchr.c
+ /Users/hlarson/lem_team/Libft/ft_memchr.c
 CMakeFiles/lem_in_team.dir/Libft/ft_memcmp.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_memcmp.c
+ /Users/hlarson/lem_team/Libft/ft_memcmp.c
 CMakeFiles/lem_in_team.dir/Libft/ft_memcpy.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_memcpy.c
+ /Users/hlarson/lem_team/Libft/ft_memcpy.c
 CMakeFiles/lem_in_team.dir/Libft/ft_memcpy_safe.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_memcpy_safe.c
+ /Users/hlarson/lem_team/Libft/ft_memcpy_safe.c
 CMakeFiles/lem_in_team.dir/Libft/ft_memdel.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_memdel.c
+ /Users/hlarson/lem_team/Libft/ft_memdel.c
 CMakeFiles/lem_in_team.dir/Libft/ft_memdup.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_memdup.c
+ /Users/hlarson/lem_team/Libft/ft_memdup.c
 CMakeFiles/lem_in_team.dir/Libft/ft_memjoin.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_memjoin.c
+ /Users/hlarson/lem_team/Libft/ft_memjoin.c
 CMakeFiles/lem_in_team.dir/Libft/ft_memjoin_free_1.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_memjoin_free_1.c
+ /Users/hlarson/lem_team/Libft/ft_memjoin_free_1.c
 CMakeFiles/lem_in_team.dir/Libft/ft_memmove.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_memmove.c
+ /Users/hlarson/lem_team/Libft/ft_memmove.c
 CMakeFiles/lem_in_team.dir/Libft/ft_memset.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_memset.c
+ /Users/hlarson/lem_team/Libft/ft_memset.c
 CMakeFiles/lem_in_team.dir/Libft/ft_new_null_str.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_new_null_str.c
+ /Users/hlarson/lem_team/Libft/ft_new_null_str.c
 CMakeFiles/lem_in_team.dir/Libft/ft_nuller_double_point.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_nuller_double_point.c
+ /Users/hlarson/lem_team/Libft/ft_nuller_double_point.c
 CMakeFiles/lem_in_team.dir/Libft/ft_nuller_double_size_t.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_nuller_double_size_t.c
+ /Users/hlarson/lem_team/Libft/ft_nuller_double_size_t.c
 CMakeFiles/lem_in_team.dir/Libft/ft_numch.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_numch.c
+ /Users/hlarson/lem_team/Libft/ft_numch.c
 CMakeFiles/lem_in_team.dir/Libft/ft_open_file_readonly.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_open_file_readonly.c
+ /Users/hlarson/lem_team/Libft/ft_open_file_readonly.c
 CMakeFiles/lem_in_team.dir/Libft/ft_print_two_dimensional_array.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_print_two_dimensional_array.c
+ /Users/hlarson/lem_team/Libft/ft_print_two_dimensional_array.c
 CMakeFiles/lem_in_team.dir/Libft/ft_putchar.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_putchar.c
+ /Users/hlarson/lem_team/Libft/ft_putchar.c
 CMakeFiles/lem_in_team.dir/Libft/ft_putchar_fd.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_putchar_fd.c
+ /Users/hlarson/lem_team/Libft/ft_putchar_fd.c
 CMakeFiles/lem_in_team.dir/Libft/ft_putendl.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_putendl.c
+ /Users/hlarson/lem_team/Libft/ft_putendl.c
 CMakeFiles/lem_in_team.dir/Libft/ft_putendl_fd.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_putendl_fd.c
+ /Users/hlarson/lem_team/Libft/ft_putendl_fd.c
 CMakeFiles/lem_in_team.dir/Libft/ft_putnbr.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_putnbr.c
+ /Users/hlarson/lem_team/Libft/ft_putnbr.c
 CMakeFiles/lem_in_team.dir/Libft/ft_putnbr_fd.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_putnbr_fd.c
+ /Users/hlarson/lem_team/Libft/ft_putnbr_fd.c
 CMakeFiles/lem_in_team.dir/Libft/ft_putstr.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_putstr.c
+ /Users/hlarson/lem_team/Libft/ft_putstr.c
 CMakeFiles/lem_in_team.dir/Libft/ft_putstr_fd.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_putstr_fd.c
+ /Users/hlarson/lem_team/Libft/ft_putstr_fd.c
 CMakeFiles/lem_in_team.dir/Libft/ft_putstr_len.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_putstr_len.c
+ /Users/hlarson/lem_team/Libft/ft_putstr_len.c
 CMakeFiles/lem_in_team.dir/Libft/ft_putstr_len_fd.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_putstr_len_fd.c
+ /Users/hlarson/lem_team/Libft/ft_putstr_len_fd.c
 CMakeFiles/lem_in_team.dir/Libft/ft_range_str.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_range_str.c
+ /Users/hlarson/lem_team/Libft/ft_range_str.c
 CMakeFiles/lem_in_team.dir/Libft/ft_sort_quick.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_sort_quick.c
+ /Users/hlarson/lem_team/Libft/ft_sort_quick.c
 CMakeFiles/lem_in_team.dir/Libft/ft_str_disnuller_end.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_str_disnuller_end.c
+ /Users/hlarson/lem_team/Libft/ft_str_disnuller_end.c
 CMakeFiles/lem_in_team.dir/Libft/ft_str_lower.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_str_lower.c
+ /Users/hlarson/lem_team/Libft/ft_str_lower.c
 CMakeFiles/lem_in_team.dir/Libft/ft_str_reverse.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_str_reverse.c
+ /Users/hlarson/lem_team/Libft/ft_str_reverse.c
 CMakeFiles/lem_in_team.dir/Libft/ft_str_upper.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_str_upper.c
+ /Users/hlarson/lem_team/Libft/ft_str_upper.c
 CMakeFiles/lem_in_team.dir/Libft/ft_str_width.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_str_width.c
+ /Users/hlarson/lem_team/Libft/ft_str_width.c
 CMakeFiles/lem_in_team.dir/Libft/ft_str_width_free.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_str_width_free.c
+ /Users/hlarson/lem_team/Libft/ft_str_width_free.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strcat.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strcat.c
+ /Users/hlarson/lem_team/Libft/ft_strcat.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strchr.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strchr.c
+ /Users/hlarson/lem_team/Libft/ft_strchr.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strclr.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strclr.c
+ /Users/hlarson/lem_team/Libft/ft_strclr.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strcmp.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strcmp.c
+ /Users/hlarson/lem_team/Libft/ft_strcmp.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strcmp_no_spaces.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strcmp_no_spaces.c
+ /Users/hlarson/lem_team/Libft/ft_strcmp_no_spaces.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strcpy.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strcpy.c
+ /Users/hlarson/lem_team/Libft/ft_strcpy.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strdel.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strdel.c
+ /Users/hlarson/lem_team/Libft/ft_strdel.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strdup.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strdup.c
+ /Users/hlarson/lem_team/Libft/ft_strdup.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strdup_free.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strdup_free.c
+ /Users/hlarson/lem_team/Libft/ft_strdup_free.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strdup_n.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strdup_n.c
+ /Users/hlarson/lem_team/Libft/ft_strdup_n.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strdup_n_free.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strdup_n_free.c
+ /Users/hlarson/lem_team/Libft/ft_strdup_n_free.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strequ.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strequ.c
+ /Users/hlarson/lem_team/Libft/ft_strequ.c
 CMakeFiles/lem_in_team.dir/Libft/ft_striter.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_striter.c
+ /Users/hlarson/lem_team/Libft/ft_striter.c
 CMakeFiles/lem_in_team.dir/Libft/ft_striteri.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_striteri.c
+ /Users/hlarson/lem_team/Libft/ft_striteri.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strjoin.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strjoin.c
+ /Users/hlarson/lem_team/Libft/ft_strjoin.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strjoin_free_1.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strjoin_free_1.c
+ /Users/hlarson/lem_team/Libft/ft_strjoin_free_1.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strjoin_free_2.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strjoin_free_2.c
+ /Users/hlarson/lem_team/Libft/ft_strjoin_free_2.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strjoin_free_both.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strjoin_free_both.c
+ /Users/hlarson/lem_team/Libft/ft_strjoin_free_both.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strlcat.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strlcat.c
+ /Users/hlarson/lem_team/Libft/ft_strlcat.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strlen.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strlen.c
+ /Users/hlarson/lem_team/Libft/ft_strlen.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strlen_safe.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strlen_safe.c
+ /Users/hlarson/lem_team/Libft/ft_strlen_safe.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strmap.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strmap.c
+ /Users/hlarson/lem_team/Libft/ft_strmap.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strmapi.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strmapi.c
+ /Users/hlarson/lem_team/Libft/ft_strmapi.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strncat.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strncat.c
+ /Users/hlarson/lem_team/Libft/ft_strncat.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strncmp.c.o
- /home/alexander/lem_in/Libft/ft_strncmp.c
+ /Users/hlarson/lem_team/Libft/ft_strncmp.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strncpy.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strncpy.c
+ /Users/hlarson/lem_team/Libft/ft_strncpy.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strnequ.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strnequ.c
+ /Users/hlarson/lem_team/Libft/ft_strnequ.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strnew.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strnew.c
+ /Users/hlarson/lem_team/Libft/ft_strnew.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strnew_filler.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strnew_filler.c
+ /Users/hlarson/lem_team/Libft/ft_strnew_filler.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strnew_not_bzero.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strnew_not_bzero.c
+ /Users/hlarson/lem_team/Libft/ft_strnew_not_bzero.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strnstr.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strnstr.c
+ /Users/hlarson/lem_team/Libft/ft_strnstr.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strrchr.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strrchr.c
+ /Users/hlarson/lem_team/Libft/ft_strrchr.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strsplit.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strsplit.c
+ /Users/hlarson/lem_team/Libft/ft_strsplit.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strsplit_spaces.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strsplit_spaces.c
+ /Users/hlarson/lem_team/Libft/ft_strsplit_spaces.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strstr.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strstr.c
+ /Users/hlarson/lem_team/Libft/ft_strstr.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strsub.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strsub.c
+ /Users/hlarson/lem_team/Libft/ft_strsub.c
 CMakeFiles/lem_in_team.dir/Libft/ft_strtrim.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_strtrim.c
+ /Users/hlarson/lem_team/Libft/ft_strtrim.c
 CMakeFiles/lem_in_team.dir/Libft/ft_swap_byte.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_swap_byte.c
+ /Users/hlarson/lem_team/Libft/ft_swap_byte.c
 CMakeFiles/lem_in_team.dir/Libft/ft_swap_n_bytes.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_swap_n_bytes.c
+ /Users/hlarson/lem_team/Libft/ft_swap_n_bytes.c
 CMakeFiles/lem_in_team.dir/Libft/ft_this_all_files_is_same.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_this_all_files_is_same.c
+ /Users/hlarson/lem_team/Libft/ft_this_all_files_is_same.c
 CMakeFiles/lem_in_team.dir/Libft/ft_this_all_files_is_same_free.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_this_all_files_is_same_free.c
+ /Users/hlarson/lem_team/Libft/ft_this_all_files_is_same_free.c
 CMakeFiles/lem_in_team.dir/Libft/ft_this_files_is_same.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_this_files_is_same.c
+ /Users/hlarson/lem_team/Libft/ft_this_files_is_same.c
 CMakeFiles/lem_in_team.dir/Libft/ft_tolower.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_tolower.c
+ /Users/hlarson/lem_team/Libft/ft_tolower.c
 CMakeFiles/lem_in_team.dir/Libft/ft_toupper.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/ft_toupper.c
+ /Users/hlarson/lem_team/Libft/ft_toupper.c
 CMakeFiles/lem_in_team.dir/Libft/get_next_line.c.o
  ../Libft/includes/libft.h
- /home/alexander/lem_in/Libft/get_next_line.c
+ /Users/hlarson/lem_team/Libft/get_next_line.c
+CMakeFiles/lem_in_team.dir/srcs/arg.c.o
+ ../Libft/includes/libft.h
+ ../includes/lem_in.h
+ /Users/hlarson/lem_team/srcs/arg.c
 CMakeFiles/lem_in_team.dir/srcs/check_first_line.c.o
  ../Libft/includes/libft.h
  ../includes/lem_in.h
- /home/alexander/lem_in/srcs/check_first_line.c
+ /Users/hlarson/lem_team/srcs/check_first_line.c
 CMakeFiles/lem_in_team.dir/srcs/count_num.c.o
  ../Libft/includes/libft.h
  ../includes/lem_in.h
- /home/alexander/lem_in/srcs/count_num.c
+ /Users/hlarson/lem_team/srcs/count_num.c
 CMakeFiles/lem_in_team.dir/srcs/create_graph.c.o
  ../Libft/includes/libft.h
  ../includes/lem_in.h
- /home/alexander/lem_in/srcs/create_graph.c
+ /Users/hlarson/lem_team/srcs/create_graph.c
 CMakeFiles/lem_in_team.dir/srcs/create_help.c.o
  ../Libft/includes/libft.h
  ../includes/lem_in.h
- /home/alexander/lem_in/srcs/create_help.c
+ /Users/hlarson/lem_team/srcs/create_help.c
+CMakeFiles/lem_in_team.dir/srcs/ft_check_adjacency.c.o
+ ../Libft/includes/libft.h
+ ../includes/lem_in.h
+ /Users/hlarson/lem_team/srcs/ft_check_adjacency.c
 CMakeFiles/lem_in_team.dir/srcs/ft_check_comment.c.o
  ../Libft/includes/libft.h
  ../includes/lem_in.h
- /home/alexander/lem_in/srcs/ft_check_comment.c
+ /Users/hlarson/lem_team/srcs/ft_check_comment.c
 CMakeFiles/lem_in_team.dir/srcs/ft_check_format_one.c.o
  ../Libft/includes/libft.h
  ../includes/lem_in.h
- /home/alexander/lem_in/srcs/ft_check_format_one.c
+ /Users/hlarson/lem_team/srcs/ft_check_format_one.c
+CMakeFiles/lem_in_team.dir/srcs/ft_check_num.c.o
+ ../Libft/includes/libft.h
+ ../includes/lem_in.h
+ /Users/hlarson/lem_team/srcs/ft_check_num.c
 CMakeFiles/lem_in_team.dir/srcs/ft_copy_name.c.o
  ../Libft/includes/libft.h
  ../includes/lem_in.h
- /home/alexander/lem_in/srcs/ft_copy_name.c
+ /Users/hlarson/lem_team/srcs/ft_copy_name.c
 CMakeFiles/lem_in_team.dir/srcs/ft_exit_adjacency.c.o
  ../Libft/includes/libft.h
  ../includes/lem_in.h
- /home/alexander/lem_in/srcs/ft_exit_adjacency.c
+ /Users/hlarson/lem_team/srcs/ft_exit_adjacency.c
 CMakeFiles/lem_in_team.dir/srcs/ft_exit_checking.c.o
  ../Libft/includes/libft.h
  ../includes/lem_in.h
- /home/alexander/lem_in/srcs/ft_exit_checking.c
+ /Users/hlarson/lem_team/srcs/ft_exit_checking.c
 CMakeFiles/lem_in_team.dir/srcs/ft_make_adjacency.c.o
  ../Libft/includes/libft.h
  ../includes/lem_in.h
- /home/alexander/lem_in/srcs/ft_make_adjacency.c
+ /Users/hlarson/lem_team/srcs/ft_make_adjacency.c
 CMakeFiles/lem_in_team.dir/srcs/ft_validate.c.o
  ../Libft/includes/libft.h
  ../includes/lem_in.h
- /home/alexander/lem_in/srcs/ft_validate.c
+ /Users/hlarson/lem_team/srcs/ft_validate.c
 CMakeFiles/lem_in_team.dir/srcs/main.c.o
  ../Libft/includes/libft.h
  ../includes/lem_in.h
- /home/alexander/lem_in/srcs/main.c
+ /Users/hlarson/lem_team/srcs/main.c
+CMakeFiles/lem_in_team.dir/srcs/print_adjacency.c.o
+ ../Libft/includes/libft.h
+ ../includes/lem_in.h
+ /Users/hlarson/lem_team/srcs/print_adjacency.c
 CMakeFiles/lem_in_team.dir/srcs/put_first_adjacency.c.o
  ../Libft/includes/libft.h
  ../includes/lem_in.h
- /home/alexander/lem_in/srcs/put_first_adjacency.c
+ /Users/hlarson/lem_team/srcs/put_first_adjacency.c

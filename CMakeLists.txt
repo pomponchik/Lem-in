@@ -233,4 +233,8 @@ add_executable(lem_in_team
         srcs/ft_make_adjacency.c
         srcs/ft_validate.c
         srcs/main.c
-        srcs/put_first_adjacency.c)
+        srcs/put_first_adjacency.c
+        srcs/arg.c
+        srcs/print_adjacency.c
+        srcs/ft_check_num.c
+        srcs/ft_check_adjacency.c)

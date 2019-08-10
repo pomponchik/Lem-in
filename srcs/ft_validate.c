@@ -83,7 +83,7 @@ int     ft_get_basic_coord(int k, char **line, t_help **help)
     return (-1);
 }
 
-int     ft_get_adjacency(char **line, t_graph **graph, int k, size_t count)
+int     ft_get_adjacency(char **line, t_graph **graph, int k, size_t *count)
 {
     while (get_next_line(k, line) > 0)
     {
@@ -118,11 +118,12 @@ int		ft_validate(t_graph **graph, char **argv, size_t *count)
 	if (ft_get_basic_coord(k, &line, &help) == -1)
 	    return (-1);
 	asd = create_graph(help, n, count);
-	//*graph = asd;
 	put_first_adjacency(line, &asd, *count);
-	if (ft_get_adjacency(&line, &asd, k, *count) == -1)
+	if (ft_get_adjacency(&line, &asd, k, count) == -1)
 	    return (-1);
 	ft_strdel(&line);
 	*graph = asd;
+	if (ft_check_adjacency(*graph, *count) < 0)
+	    return (ft_exit_adjacency(graph, count));
 	return (0);
 }
