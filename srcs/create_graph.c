@@ -35,6 +35,7 @@ static void			copy_data_from_help(t_graph *graph, t_help *tmp)
 	(graph)->x = tmp->x;
 	(graph)->y = tmp->y;
 	(graph)->adjacency = NULL;
+	graph->flag = 0;
 }
 
 t_graph				*create_graph(t_help *help, int n, size_t *count)

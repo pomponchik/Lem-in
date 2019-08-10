@@ -24,6 +24,6 @@ int	main(int argc, char **argv)
 	if (ft_validate(&graph, argv, &count) < 0)
 		return (main_error());
 	print_adjacency(graph, count);
-	
+	first_bfs(graph, count);
 	return (0);
 }

@@ -18,7 +18,8 @@ FILENAMES += create_graph.c create_help.c ft_check_adjacency.c
 FILENAMES += ft_check_comment.c ft_check_format_one.c ft_check_num.c
 FILENAMES += ft_copy_name.c ft_exit_adjacency.c ft_exit_checking.c
 FILENAMES += ft_make_adjacency.c ft_validate.c print_adjacency.c
-FILENAMES += put_first_adjacency.c ft_check_format_two.c
+FILENAMES += put_first_adjacency.c ft_check_format_two.c free_chains.c
+FILENAMES += first_bfs.c list_copy.c
 NAME = lem_in
 
 SRCS	=$(addprefix srcs/, $(FILENAMES))

@@ -23,6 +23,7 @@ typedef struct		s_graph
     t_list	        *adjacency;
     char			start;
     char			end;
+	char			flag;
     int				x;
     int				y;
 }					t_graph;
@@ -60,5 +61,8 @@ int                 main_error();
 int                 ft_check_adjacency(t_graph *graph, size_t count);
 int                 ft_exit_adjacency(t_graph **graph, size_t *count);
 int					help_check_line(char *c, t_help *tmp);
+void first_bfs(t_graph *graph, size_t count);
+void free_chain_no_content(t_list *lst);
+t_list *list_copy_without_flag(t_list *lst);
 
 #endif
