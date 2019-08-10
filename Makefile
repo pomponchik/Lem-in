@@ -6,16 +6,19 @@
 #    By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/24 07:18:31 by ahalmon-          #+#    #+#              #
-#    Updated: 2019/02/24 07:18:33 by ahalmon-         ###   ########.fr        #
+#    Updated: 2019/08/10 21:19:57 by hlarson          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .PHONY: clean fclean re make all
 
 FILENAMES = main.c
-FILENAMES += algorithm.c links_prove.c new_map.c new_tetra_helpers.c
-FILENAMES += new_tetra.c output.c output_helper.c
-FILENAMES += proves.c reading.c prove_input.c
+FILENAMES += arg.c check_first_line.c count_num.c
+FILENAMES += create_graph.c create_help.c ft_check_adjacency.c
+FILENAMES += ft_check_comment.c ft_check_format_one.c ft_check_num.c
+FILENAMES += ft_copy_name.c ft_exit_adjacency.c ft_exit_checking.c
+FILENAMES += ft_make_adjacency.c ft_validate.c print_adjacency.c
+FILENAMES += put_first_adjacency.c 
 NAME = fillit
 
 SRCS	=$(addprefix srcs/, $(FILENAMES))
