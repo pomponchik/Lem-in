@@ -6,7 +6,7 @@
 #    By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/24 07:18:31 by ahalmon-          #+#    #+#              #
-#    Updated: 2019/08/10 21:33:26 by hlarson          ###   ########.fr        #
+#    Updated: 2019/08/11 20:53:46 by hlarson          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ FILENAMES += ft_check_comment.c ft_check_format_one.c ft_check_num.c
 FILENAMES += ft_copy_name.c ft_exit_adjacency.c ft_exit_checking.c
 FILENAMES += ft_make_adjacency.c ft_validate.c print_adjacency.c
 FILENAMES += put_first_adjacency.c ft_check_format_two.c free_chains.c
-FILENAMES += first_bfs.c list_copy.c
+FILENAMES += list_copy.c
 NAME = lem_in
 
 SRCS	=$(addprefix srcs/, $(FILENAMES))

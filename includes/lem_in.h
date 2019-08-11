@@ -6,7 +6,7 @@
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 21:47:02 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/08/10 21:32:31 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/11 20:55:31 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,15 +45,21 @@ typedef struct		s_help
 
 typedef struct		s_organiser
 {
-	
+	t_graph			*graph;
+	size_t			size;
+	size_t			ants;
+	size_t			ants_field;
+	size_t			ants_end;
+	t_graph			*start;
+	t_graph			*end;	
 }					t_organiser;
 
 int					ft_check_comment(char *line, t_help **help, int *start, int *end);
 int                 ft_check_comment_ant(char *line);
 int					ft_check_format_one(t_help **help, char *line, int *start, int *end);
 int                 check_first_line(char *line, t_help *help);
-t_graph				*create_graph(t_help *help, int n, size_t *count);
-int					ft_validate(t_graph **graph, char **argv, size_t *count);
+t_graph				*create_graph(t_help *help, size_t *count, t_organiser *organiser);
+int					ft_validate(char **argv, t_organiser *organiser);
 int					count_num(int k);
 t_help				*create_help(int *start, int *end);
 void                add_help(t_help *tmp, t_help *help);

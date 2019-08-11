@@ -6,7 +6,7 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/10 21:39:36 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/10 21:40:36 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/11 20:57:57 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int		get_ant_num(char *line)
 	return (n);
 }
 
-int		ft_get_ant_num(int k, char **line)
+size_t		ft_get_ant_num(int k, char **line)
 {
 	int	n;
 
@@ -44,17 +44,17 @@ int		ft_get_ant_num(int k, char **line)
 		if (*line[0] == '#')
 		{
 			if (ft_check_comment_ant(*line) < 0)
-				return (-1);
+				return (0);
 		}
 		else
 		{
 			n = get_ant_num(*line);
 			if (n < 0)
-				return (-1);
+				return (0);
 			return (n);
 		}
 	}
-	return (-1);
+	return (0);
 }
 
 int		ft_get_basic_coord(int k, char **line, t_help **help)
@@ -101,29 +101,29 @@ int		ft_get_adjacency(char **line, t_graph **graph, int k, size_t *count)
 	return (0);
 }
 
-int		ft_validate(t_graph **graph, char **argv, size_t *count)
+int		ft_validate( char **argv, t_organiser *organiser)
 {
 	int		k;
 	char	*line;
 	t_help	*help;
-	int		n;
 	t_graph *asd;
+	size_t	count;
 
 	k = open(argv[1], O_RDONLY);
 	help = NULL;
 	line = NULL;
-	n = ft_get_ant_num(k, &line);
-	if (n < 0)
+	organiser->ants = ft_get_ant_num(k, &line);
+	if (organiser->ants == 0)
 		return (-1);
 	if (ft_get_basic_coord(k, &line, &help) == -1)
 		return (-1);
-	asd = create_graph(help, n, count);
-	put_first_adjacency(line, &asd, *count);
-	if (ft_get_adjacency(&line, &asd, k, count) == -1)
+	asd = create_graph(help, &count, organiser);
+	put_first_adjacency(line, &asd, count);
+	if (ft_get_adjacency(&line, &asd, k, &count) == -1)
 		return (-1);
 	ft_strdel(&line);
-	*graph = asd;
-	if (ft_check_adjacency(*graph, *count) < 0)
-		return (ft_exit_adjacency(graph, count));
+	if (ft_check_adjacency(asd, count) < 0)
+		return (ft_exit_adjacency(&asd, &count));
+	organiser->graph = (asd);
 	return (0);
 }

@@ -6,11 +6,19 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/02 16:21:12 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/10 21:23:27 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/11 20:55:37 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
+
+static void			set_organiser(t_organiser *organiser,
+					size_t count)
+{
+	organiser->size = count;
+	organiser->ants_field = 0;
+	organiser->ants_end = 0;
+}
 
 static size_t		count_elem(t_help *help)
 {
@@ -42,7 +50,8 @@ static void			copy_data_from_help(t_graph *graph, t_help *tmp)
 	graph->right = NULL;
 }
 
-t_graph				*create_graph(t_help *help, int n, size_t *count)
+t_graph				*create_graph(t_help *help,
+					size_t *count, t_organiser *organiser)
 {
 	t_graph		*graph;
 	t_help		*tmp;
@@ -53,15 +62,19 @@ t_graph				*create_graph(t_help *help, int n, size_t *count)
 	tmp = help;
 	*count = count_elem(help);
 	graph = (t_graph *)ft_memalloc(sizeof(t_graph) * (*count));
+	set_organiser(organiser, *count);
 	while (tmp)
 	{
 		swap = tmp->next;
 		copy_data_from_help(&(graph[i]), tmp);
+		if (graph[i].start)
+			organiser->start = &(graph[i]);
+		if (graph[i].end)
+			organiser->end = &(graph[i]);
 		ft_strdel(&(tmp->name));
 		free(tmp);
 		tmp = swap;
 		i++;
 	}
-	(graph[0]).ant_number = n;
 	return ((t_graph *)graph);
 }
