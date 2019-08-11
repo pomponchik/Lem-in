@@ -6,13 +6,13 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/10 21:39:36 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/11 20:57:57 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/11 21:00:02 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-int		get_ant_num(char *line)
+int			get_ant_num(char *line)
 {
 	int		n;
 	int		i;
@@ -57,7 +57,7 @@ size_t		ft_get_ant_num(int k, char **line)
 	return (0);
 }
 
-int		ft_get_basic_coord(int k, char **line, t_help **help)
+int			ft_get_basic_coord(int k, char **line, t_help **help)
 {
 	int	start;
 	int	end;
@@ -83,7 +83,7 @@ int		ft_get_basic_coord(int k, char **line, t_help **help)
 	return (-1);
 }
 
-int		ft_get_adjacency(char **line, t_graph **graph, int k, size_t *count)
+int			ft_get_adjacency(char **line, t_graph **graph, int k, size_t *count)
 {
 	while (get_next_line(k, line) > 0)
 	{
@@ -101,7 +101,7 @@ int		ft_get_adjacency(char **line, t_graph **graph, int k, size_t *count)
 	return (0);
 }
 
-int		ft_validate( char **argv, t_organiser *organiser)
+int			ft_validate(char **argv, t_organiser *organiser)
 {
 	int		k;
 	char	*line;
