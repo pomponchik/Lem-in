@@ -21,11 +21,16 @@ typedef struct		s_graph
     char			*name;
     int				ant_number;
     t_list	        *adjacency;
+	struct s_graph	*up;
+	t_list	        *down;
+	t_list	        *right;
     char			start;
     char			end;
 	char			flag;
+	char			flag_2;
     int				x;
     int				y;
+	size_t			level;
 }					t_graph;
 
 typedef struct		s_help
@@ -37,6 +42,11 @@ typedef struct		s_help
     int				x;
     int				y;
 }					t_help;
+
+typedef struct		s_organiser
+{
+	
+}					t_organiser;
 
 int					ft_check_comment(char *line, t_help **help, int *start, int *end);
 int                 ft_check_comment_ant(char *line);
@@ -64,5 +74,6 @@ int					help_check_line(char *c, t_help *tmp);
 void first_bfs(t_graph *graph, size_t count);
 void free_chain_no_content(t_list *lst);
 t_list *list_copy_without_flag(t_list *lst);
+t_list *list_copy_without_flag_2(t_list *lst);
 
 #endif

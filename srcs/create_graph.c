@@ -29,13 +29,17 @@ static size_t		count_elem(t_help *help)
 
 static void			copy_data_from_help(t_graph *graph, t_help *tmp)
 {
-	(graph)->name = ft_strdup(tmp->name);
-	(graph)->start = tmp->start;
-	(graph)->end = tmp->end;
-	(graph)->x = tmp->x;
-	(graph)->y = tmp->y;
-	(graph)->adjacency = NULL;
+	graph->name = ft_strdup(tmp->name);
+	graph->start = tmp->start;
+	graph->end = tmp->end;
+	graph->x = tmp->x;
+	graph->y = tmp->y;
+	graph->adjacency = NULL;
 	graph->flag = 0;
+	graph->flag_2 = 0;
+	graph->up = NULL;
+	graph->down = NULL;
+	graph->right = NULL;
 }
 
 t_graph				*create_graph(t_help *help, int n, size_t *count)
