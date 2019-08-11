@@ -44,10 +44,10 @@ static void			copy_data_from_help(t_graph *graph, t_help *tmp)
 	graph->y = tmp->y;
 	graph->adjacency = NULL;
 	graph->flag = 0;
-	graph->flag_2 = 0;
 	graph->up = NULL;
 	graph->down = NULL;
 	graph->right = NULL;
+	graph->ant = 0;
 }
 
 t_graph				*create_graph(t_help *help,

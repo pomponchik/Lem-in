@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   list_copy.c                                        :+:      :+:    :+:   */
+/*   disflagger.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/10 22:09:56 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/08/10 22:09:58 by ahalmon-         ###   ########.fr       */
+/*   Created: 2019/08/11 21:35:20 by ahalmon-          #+#    #+#             */
+/*   Updated: 2019/08/11 21:35:22 by ahalmon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-t_list *list_copy_without_flag(t_list *lst)
+void disflagger(t_graph *graph, size_t count)
 {
-	t_graph *node;
-	t_list *result;
+	size_t index;
 
-	result = NULL;
-	while (lst)
+	index = 0;
+	while (index < count)
 	{
-		node = lst->content;
-		if (!node->flag)
-		{
-			ft_lstadd(&result, ft_lstnew_no_copy(node, sizeof(t_graph)));
-			node->flag = 1;
-		}
-		lst = lst->next;
+		(&(graph[index]))->flag = 0;
+		index++;
 	}
-	return (result);
 }

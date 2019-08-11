@@ -21,6 +21,7 @@ int	main(int argc, char **argv)
 	if (ft_validate(argv, &organiser) < 0)
 		return (main_error());
 	print_adjacency(organiser.graph, organiser.size);
-	//first_bfs(graph, count);
+	building_connections(&organiser);
+	algorithm(&organiser);
 	return (0);
 }

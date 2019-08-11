@@ -19,6 +19,7 @@
 typedef struct		s_graph
 {
     char			*name;
+	char			ant;
     int				ant_number;
     t_list	        *adjacency;
 	struct s_graph	*up;
@@ -27,7 +28,6 @@ typedef struct		s_graph
     char			start;
     char			end;
 	char			flag;
-	char			flag_2;
     int				x;
     int				y;
 	size_t			level;
@@ -51,7 +51,7 @@ typedef struct		s_organiser
 	size_t			ants_field;
 	size_t			ants_end;
 	t_graph			*start;
-	t_graph			*end;	
+	t_graph			*end;
 }					t_organiser;
 
 int					ft_check_comment(char *line, t_help **help, int *start, int *end);
@@ -77,9 +77,11 @@ int                 main_error();
 int                 ft_check_adjacency(t_graph *graph, size_t count);
 int                 ft_exit_adjacency(t_graph **graph, size_t *count);
 int					help_check_line(char *c, t_help *tmp);
-void first_bfs(t_graph *graph, size_t count);
+void first_bfs(t_graph *graph, size_t count, t_graph *start, t_graph *finish);
 void free_chain_no_content(t_list *lst);
 t_list *list_copy_without_flag(t_list *lst);
-t_list *list_copy_without_flag_2(t_list *lst);
+void building_connections(t_organiser *organiser);
+void disflagger(t_graph *graph, size_t count);
+void algorithm(t_organiser *organiser);
 
 #endif
