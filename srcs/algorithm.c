@@ -14,7 +14,6 @@
 
 static void print_swap(t_graph *donor, t_graph *recipient)
 {
-	ft_putstr("print_swap\n");
 	ft_putstr("L");
 	ft_putstr(donor->name);
 	ft_putstr("-");
@@ -24,7 +23,6 @@ static void print_swap(t_graph *donor, t_graph *recipient)
 
 static void swap_start(t_graph *recipient, t_organiser *organiser)
 {
-	ft_putstr("swap_start\n");
 	if (!recipient)
 		return ;
 	print_swap(organiser->start, recipient);
@@ -35,7 +33,6 @@ static void swap_start(t_graph *recipient, t_organiser *organiser)
 
 static void swap_ant(t_graph *donor, t_graph *recipient, t_organiser *organiser)
 {
-	ft_putstr("swap_ant\n");
 	if (!recipient)
 		return ;
 	print_swap(donor, recipient);
@@ -50,20 +47,44 @@ static void swap_ant(t_graph *donor, t_graph *recipient, t_organiser *organiser)
 	recipient->ant = 1;
 }
 
-static void jump(t_graph *node, t_organiser *organiser)
+static int down_is(t_list *down)
 {
-	size_t num_ants;
-	t_list *down;
-	t_graph *temp;
-	t_graph *recipient;
+	t_graph *node;
 
-	ft_putstr("jump\n");
-	num_ants = organiser->ants_end + organiser->ants_field;
-	if (!((node->start && organiser->ants) || node->ant))
-		return ;
-	ft_putstr("post-if\n");
-	down = node->down;
+	while (down)
+	{
+		node = down->content;
+		if (!node->ant)
+			return (1);
+		down = down->next;
+	}
+	return (0);
+}
+
+static t_graph *search_recipient_this(t_list *this)
+{
+	t_graph *node;
+
+	if (!this)
+		return (NULL);
+	while (this)
+	{
+		node = this->content;
+		if (!node->ant && down_is(node->down))
+			return (node);
+		this = this->next;
+	}
+	return (NULL);
+}
+
+static t_graph *search_recipient(t_list *down, t_list *this)
+{
+	t_graph *recipient;
+	t_graph *temp;
+	t_list *down_temp;
+
 	recipient = NULL;
+	down_temp = down;
 	while (down)
 	{
 		temp = down->content;
@@ -74,19 +95,33 @@ static void jump(t_graph *node, t_organiser *organiser)
 		}
 		down = down->next;
 	}
-	if (node->start)
+	if (!recipient)
+		return (search_recipient_this(this));
+	return (recipient);
+}
+
+static void jump(t_graph *node, t_organiser *organiser)
+{
+	size_t num_ants;
+	t_list *down;
+	t_list *this;
+	t_graph *recipient;
+
+	num_ants = organiser->ants_end + organiser->ants_field;
+	if (!((node->start && organiser->ants) || node->ant))
+		return ;
+	down = node->down;
+	this = node->this;
+	while (node->start && organiser->ants && (recipient = search_recipient(down, this)))
 		swap_start(recipient, organiser);
-	else
-		swap_ant(node, recipient, organiser);
+	if (!node->start)
+		swap_ant(node, search_recipient(down, this), organiser);
 }
 
 static void to_right(t_list *level, size_t level_counter, t_organiser *organiser)
 {
 	t_graph *node;
 
-	ft_putstr("to_right ");
-	ft_putnbr((int)level_counter);
-	ft_putstr("\n");
 	if (!level_counter)
 		return ;
 	while (level)
@@ -103,7 +138,6 @@ static void to_start(t_graph *level, t_organiser *organiser)
 	size_t counter;
 
 	counter = 0;
-	ft_putstr("to_start\n");
 	while (level)
 	{
 		to_right(level->right, counter, organiser);

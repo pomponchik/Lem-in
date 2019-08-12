@@ -47,7 +47,7 @@ static void recursive_bfs_to_start(t_list *level, size_t level_num)
 		node = (t_graph *)(level->content);
 		if (level_num && !node->level && !node->end)
 			node->level = level_num;
-		next_level = ft_lst_join(next_level, list_copy_without_flag(node->adjacency));
+		next_level = ft_lst_join(next_level, list_copy_without_flag_2(node->adjacency));
 		ft_putstr(node->name);
 		ft_putstr("->");
 		level = level->next;

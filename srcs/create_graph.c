@@ -47,6 +47,7 @@ static void			copy_data_from_help(t_graph *graph, t_help *tmp)
 	graph->up = NULL;
 	graph->down = NULL;
 	graph->right = NULL;
+	graph->this = NULL;
 	graph->ant = 0;
 }
 

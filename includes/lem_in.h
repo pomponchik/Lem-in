@@ -25,6 +25,7 @@ typedef struct		s_graph
 	struct s_graph	*up;
 	t_list	        *down;
 	t_list	        *right;
+	t_list	        *this;
     char			start;
     char			end;
 	char			flag;
@@ -80,6 +81,7 @@ int					help_check_line(char *c, t_help *tmp);
 void first_bfs(t_graph *graph, size_t count, t_graph *start, t_graph *finish);
 void free_chain_no_content(t_list *lst);
 t_list *list_copy_without_flag(t_list *lst);
+t_list *list_copy_without_flag_2(t_list *lst);
 void building_connections(t_organiser *organiser);
 void disflagger(t_graph *graph, size_t count);
 void algorithm(t_organiser *organiser);
