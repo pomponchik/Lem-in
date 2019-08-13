@@ -6,11 +6,16 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 19:04:56 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/13 20:39:07 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/13 20:57:18 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
+
+static void	help_helper(t_graph *graph, size_t i, t_graph *tmp)
+{
+	ft_printf("%s-%s\n", graph[i].name, tmp->name);
+}
 
 static void	help_print_connections(t_organiser *organizer)
 {
@@ -32,7 +37,7 @@ static void	help_print_connections(t_organiser *organizer)
 			while (tmp->x != graph[i + j].x && (i + j) < organizer->size)
 				j++;
 			if (j > 0 && (j + i) < organizer->size)
-				ft_printf("%s-%s\n", graph[i].name, tmp->name);
+				help_helper(graph, i, tmp);
 			adjacency = adjacency->next;
 		}
 		i++;
@@ -49,6 +54,10 @@ void		print_map(t_organiser *organizer)
 	ft_printf("%d\n", organizer->ants);
 	while (i < organizer->size)
 	{
+		if (graph[i].end == 1)
+			ft_printf("##end\n");
+		if (graph[i].start == 1)
+			ft_printf("##start\n");
 		ft_printf("%s %d %d\n", graph[i].name, graph[i].x, graph[i].y);
 		i++;
 	}
