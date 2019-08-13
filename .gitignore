@@ -1,7 +1,7 @@
 .DS_Store
 *.o
 build
-lem_in
+lem-in
 *.swp
 CMakeLists.txt
 cmake-build-debug
