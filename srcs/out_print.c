@@ -1,4 +1,0 @@
-void out_print()
-{
-
-}

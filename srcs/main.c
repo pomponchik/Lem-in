@@ -20,7 +20,6 @@ int	main(int argc, char **argv)
 		return (arg_equal_one());
 	if (ft_validate(argv, &organiser) < 0)
 		return (main_error());
-	print_adjacency(organiser.graph, organiser.size);
 	building_connections(&organiser);
 	print_map(&organiser);
 	algorithm(&organiser);

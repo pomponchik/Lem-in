@@ -54,6 +54,7 @@ typedef struct		s_organiser
 	size_t			ants_end;
 	t_graph			*start;
 	t_graph			*end;
+	t_list	        *commands;
 }					t_organiser;
 
 int					ft_check_comment(char *line, t_help **help, int *start, int *end);
@@ -73,7 +74,6 @@ int                 ft_exit_adjacency_norm(char *c, char *line);
 int                 ft_exit_adjacency_error(char *c, char *line, t_graph **graph, size_t *count);
 int                 ft_exit_adjacency_error_two(char *line, t_graph **graph, size_t *count);
 int                 arg_equal_one(void);
-void                print_adjacency(t_graph *graph, size_t count);
 int                 ft_check_num(t_help *help, t_help *tmp);
 int                 main_error();
 int                 ft_check_adjacency(t_graph *graph, size_t count);

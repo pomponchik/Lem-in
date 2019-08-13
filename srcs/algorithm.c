@@ -12,20 +12,23 @@
 
 #include "lem_in.h"
 
-static void print_swap(t_graph *donor, t_graph *recipient)
+static void print_swap(t_graph *donor, t_graph *recipient, t_organiser *organiser)
 {
-	ft_putstr("L");
-	ft_putstr(donor->name);
-	ft_putstr("-");
-	ft_putstr(recipient->name);
-	ft_putstr(" ");
+	char *str;
+
+	str = ft_strjoin("L", donor->name);
+	ft_lstadd(&((*organiser).commands), ft_lstnew_no_copy(str, ft_strlen(str)));
+	str = ft_strjoin("-", recipient->name);
+	ft_lstadd(&((*organiser).commands), ft_lstnew_no_copy(str, ft_strlen(str)));
+	str = ft_strdup(" ");
+	ft_lstadd(&((*organiser).commands), ft_lstnew_no_copy(str, ft_strlen(str)));
 }
 
 static void swap_start(t_graph *recipient, t_organiser *organiser)
 {
 	if (!recipient)
 		return ;
-	print_swap(organiser->start, recipient);
+	print_swap(organiser->start, recipient, organiser);
 	organiser->ants_field++;
 	organiser->ants--;
 	recipient->ant = 1;
@@ -35,7 +38,7 @@ static void swap_ant(t_graph *donor, t_graph *recipient, t_organiser *organiser)
 {
 	if (!recipient)
 		return ;
-	print_swap(donor, recipient);
+	print_swap(donor, recipient, organiser);
 	if (recipient->end)
 	{
 		organiser->ants_field--;
@@ -149,15 +152,17 @@ static void to_start(t_graph *level, t_organiser *organiser)
 void algorithm(t_organiser *organiser)
 {
 	size_t ants;
-	ft_putstr("\n");
-	ft_putstr("\n");
+	char *str;
+
 	ants = organiser->ants;
-	int y = 0;
+	ft_putstr("\n");
+	organiser->commands = NULL;
 	while (organiser->ants_end != ants)
 	{
 		to_start(organiser->end, organiser);
-		ft_putstr("\n");
-		if (y++ == 100)
-			break ;
+		str = ft_strdup("\n");
+		ft_lstadd(&((*organiser).commands), ft_lstnew_no_copy(str, 1));
 	}
+	ft_lst_putstr_free_cs(ft_lst_turn(organiser->commands));
+	ft_exit_adjacency(&(organiser->graph), &(organiser->size));
 }
