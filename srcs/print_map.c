@@ -6,7 +6,7 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 19:04:56 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/13 19:12:30 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/13 20:14:49 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ void	print_map(t_organiser *organizer)
 	size_t	i;
 
 	i = 0;
-	graph = organiser->graph;
-	ft_putnbr(organizer->ants);
-	while (i < organiser->size)
+	graph = organizer->graph;
+	ft_printf("%d\n", organizer->ants);
+	while (i < organizer->size)
 	{
 		ft_printf("%s %d %d\n", graph[i].name, graph[i].x, graph[i].y);
 		i++;
 	}
-
+}

@@ -6,7 +6,7 @@
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 21:47:02 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/08/13 19:58:38 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/13 20:12:03 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,6 @@ t_list *list_copy_without_flag_2(t_list *lst);
 void building_connections(t_organiser *organiser);
 void disflagger(t_graph *graph, size_t count);
 void algorithm(t_organiser *organiser);
+void	print_map(t_organiser *organiser);
 
 #endif

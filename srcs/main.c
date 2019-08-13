@@ -6,7 +6,7 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 18:13:06 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/13 19:14:32 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/13 20:13:23 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(int argc, char **argv)
 		return (main_error());
 	print_adjacency(organiser.graph, organiser.size);
 	building_connections(&organiser);
-	//print_map(&organiser);
+	print_map(&organiser);
 	algorithm(&organiser);
 	return (0);
 }
