@@ -6,13 +6,13 @@
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/25 21:20:15 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/06/19 18:43:43 by ahalmon-         ###   ########.fr       */
+/*   Updated: 2019/08/13 19:30:23 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# define BUFF_SIZE 20
+# define BUFF_SIZE 1024
 
 # include <string.h>
 # include <stdlib.h>
