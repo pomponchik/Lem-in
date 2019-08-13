@@ -6,7 +6,7 @@
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 21:47:02 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/08/11 20:55:31 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/13 19:15:14 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define HEAD_H
 
 # include "../Libft/includes/libft.h"
-# include <stdio.h>
+# include "../ft_printf/ft_printf.h"
 
 typedef struct		s_graph
 {

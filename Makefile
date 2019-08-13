@@ -6,7 +6,7 @@
 #    By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/24 07:18:31 by ahalmon-          #+#    #+#              #
-#    Updated: 2019/08/11 20:53:46 by hlarson          ###   ########.fr        #
+#    Updated: 2019/08/13 19:14:09 by hlarson          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,9 @@ re: fclean all
 
 lib:
 	@make -C ./Libft
+	@make -C ./ft_printf
 	@make clean -C ./Libft
+	@make clean -C ./ft_printf
 
 clean:
 	@rm -rf build/

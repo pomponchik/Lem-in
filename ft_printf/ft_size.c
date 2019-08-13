@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_size.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/31 18:13:06 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/13 19:14:32 by hlarson          ###   ########.fr       */
+/*   Created: 2019/07/10 20:34:46 by hlarson           #+#    #+#             */
+/*   Updated: 2019/07/10 20:34:52 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lem_in.h"
-
-int	main(int argc, char **argv)
+int		ft_size(long int n)
 {
-	t_organiser	organiser;
+	unsigned int i;
 
-	if (argc == 1)
-		return (arg_equal_one());
-	if (ft_validate(argv, &organiser) < 0)
-		return (main_error());
-	print_adjacency(organiser.graph, organiser.size);
-	building_connections(&organiser);
-	//print_map(&organiser);
-	algorithm(&organiser);
-	return (0);
+	i = 0;
+	if (n == 0)
+		i++;
+	while (n > 0)
+	{
+		i++;
+		n /= 10;
+	}
+	return (i);
 }

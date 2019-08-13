@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   print_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/31 18:13:06 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/13 19:14:32 by hlarson          ###   ########.fr       */
+/*   Created: 2019/08/13 19:04:56 by hlarson           #+#    #+#             */
+/*   Updated: 2019/08/13 19:12:30 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-int	main(int argc, char **argv)
+void	print_map(t_organiser *organizer)
 {
-	t_organiser	organiser;
+	t_graph *graph;
+	size_t	i;
 
-	if (argc == 1)
-		return (arg_equal_one());
-	if (ft_validate(argv, &organiser) < 0)
-		return (main_error());
-	print_adjacency(organiser.graph, organiser.size);
-	building_connections(&organiser);
-	//print_map(&organiser);
-	algorithm(&organiser);
-	return (0);
-}
+	i = 0;
+	graph = organiser->graph;
+	ft_putnbr(organizer->ants);
+	while (i < organiser->size)
+	{
+		ft_printf("%s %d %d\n", graph[i].name, graph[i].x, graph[i].y);
+		i++;
+	}
+

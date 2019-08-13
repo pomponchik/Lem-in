@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_minus_str.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/31 18:13:06 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/13 19:14:32 by hlarson          ###   ########.fr       */
+/*   Created: 2019/07/10 22:39:16 by hlarson           #+#    #+#             */
+/*   Updated: 2019/07/10 22:39:18 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lem_in.h"
+#include "ft_printf.h"
 
-int	main(int argc, char **argv)
+char	*ft_make_minus_str(char *c)
 {
-	t_organiser	organiser;
+	char	*d;
+	int		i;
+	int		x;
 
-	if (argc == 1)
-		return (arg_equal_one());
-	if (ft_validate(argv, &organiser) < 0)
-		return (main_error());
-	print_adjacency(organiser.graph, organiser.size);
-	building_connections(&organiser);
-	//print_map(&organiser);
-	algorithm(&organiser);
-	return (0);
+	d = ft_strnew(ft_strlen(c));
+	i = ft_count_until_one(c) + 1;
+	d[0] = c[i];
+	d[1] = '.';
+	x = 2;
+	while (c[i])
+	{
+		d[x] = c[i];
+		i++;
+		x++;
+	}
+	return (d);
 }

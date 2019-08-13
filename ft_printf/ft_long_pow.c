@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_long_sum.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/31 18:13:06 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/13 19:14:32 by hlarson          ###   ########.fr       */
+/*   Created: 2019/03/25 18:35:19 by hlarson           #+#    #+#             */
+/*   Updated: 2019/04/19 23:01:04 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lem_in.h"
+#include "ft_printf.h"
 
-int	main(int argc, char **argv)
+char	*ft_long_pow(long long n)
 {
-	t_organiser	organiser;
+	char	*d;
+	char	*l;
 
-	if (argc == 1)
-		return (arg_equal_one());
-	if (ft_validate(argv, &organiser) < 0)
-		return (main_error());
-	print_adjacency(organiser.graph, organiser.size);
-	building_connections(&organiser);
-	//print_map(&organiser);
-	algorithm(&organiser);
-	return (0);
+	if (n == 0)
+		return (ft_strdup("1.0"));
+	d = ft_strnew(3);
+	d[0] = '1';
+	d[1] = '.';
+	d[2] = '0';
+	while (n != 0)
+	{
+		l = ft_long_composition_dot("2", d);
+		ft_strdel(&d);
+		d = l;
+		n--;
+	}
+	return (d);
 }

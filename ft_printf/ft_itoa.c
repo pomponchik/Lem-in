@@ -1,28 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/31 18:13:06 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/13 19:14:32 by hlarson          ###   ########.fr       */
+/*   Created: 2019/07/10 19:44:51 by hlarson           #+#    #+#             */
+/*   Updated: 2019/07/10 19:45:00 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lem_in.h"
+#include "ft_printf.h"
 
-int	main(int argc, char **argv)
+char	*ft_itoa(int n)
 {
-	t_organiser	organiser;
+	int			i;
+	char		*numb;
+	int			flag;
+	long int	k;
 
-	if (argc == 1)
-		return (arg_equal_one());
-	if (ft_validate(argv, &organiser) < 0)
-		return (main_error());
-	print_adjacency(organiser.graph, organiser.size);
-	building_connections(&organiser);
-	//print_map(&organiser);
-	algorithm(&organiser);
-	return (0);
+	k = (long int)n;
+	flag = 0;
+	if (k < 0)
+	{
+		flag = 1;
+		k *= -1;
+	}
+	i = ft_size(k);
+	numb = (char *)malloc(sizeof(char) * i + 1 + flag);
+	if (!numb)
+		return (NULL);
+	if (flag == 1)
+		numb[0] = '-';
+	numb[i + flag] = '\0';
+	while (i-- > 0)
+	{
+		numb[i + flag] = k % 10 + '0';
+		k = k / 10;
+	}
+	return (numb);
 }

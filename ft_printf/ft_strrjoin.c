@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/31 18:13:06 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/13 19:14:32 by hlarson          ###   ########.fr       */
+/*   Created: 2018/11/30 19:16:04 by hlarson           #+#    #+#             */
+/*   Updated: 2019/03/26 17:10:58 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lem_in.h"
+#include "ft_printf.h"
 
-int	main(int argc, char **argv)
+char				*ft_strrjoin(char *a, char *b)
 {
-	t_organiser	organiser;
+	char	*c;
+	char	*d;
+	char	*x;
+	size_t	i;
 
-	if (argc == 1)
-		return (arg_equal_one());
-	if (ft_validate(argv, &organiser) < 0)
-		return (main_error());
-	print_adjacency(organiser.graph, organiser.size);
-	building_connections(&organiser);
-	//print_map(&organiser);
-	algorithm(&organiser);
-	return (0);
+	d = a;
+	x = b;
+	i = 0;
+	c = ft_strnew(ft_strlen(d) + ft_strlen(x));
+	while (*d)
+		c[i++] = *d++;
+	while (*x)
+		c[i++] = *x++;
+	ft_strdel(&a);
+	return (c);
 }
