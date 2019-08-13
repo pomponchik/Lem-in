@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin_fr_both.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/17 03:41:39 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/08/13 19:39:18 by hlarson          ###   ########.fr       */
+/*   Created: 2019/03/16 05:53:12 by ahalmon-          #+#    #+#             */
+/*   Updated: 2019/08/13 19:48:39 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	*ft_memcpy(void *destptr, const void *srcptr, size_t num)
+char		*ft_strjoin_fr_both(char *s1, char *s2)
 {
-	if (destptr == (void *)srcptr)
-		return ((void *)srcptr);
-	while (num)
-	{
-		((char *)destptr)[num - 1] = ((char *)srcptr)[num - 1];
-		num--;
-	}
-	return (destptr);
+	char	*result;
+
+	result = ft_strjoin(s1, s2);
+	ft_free_both(s1, s2);
+	return (result);
 }

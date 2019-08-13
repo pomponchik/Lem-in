@@ -6,7 +6,7 @@
 /*   By: rpizpot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 19:25:42 by rpizpot           #+#    #+#             */
-/*   Updated: 2019/08/13 19:25:27 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/13 19:50:58 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,11 +91,14 @@ t_print						*ft_atoi_precision(t_print *print);
 t_print						*parser_size(t_print *print);
 t_print						*parser_type(t_print *print);
 t_buf						*buffer(t_print *print, t_buf *for_buf, char *str);
-t_buf						*filling_buf_byspace(t_print *print, t_buf *for_buf);
-t_buf						*filling_buf_2(t_print *print, t_buf *for_buf,
+t_buf						*filling_buf_byspace(t_print *print,
+							t_buf *for_buf);
+t_buf						*filling_buf_2(t_print *print,
+							t_buf *for_buf,
 		char **str);
 t_buf						*filling_buf_start(t_print *print, t_buf *for_buf,
 		int len);
+char						*ft_strcat(char *str1, const char *str2);
 void						what_print(t_print *print, t_buf *for_buf);
 int							ft_printf(const char *format, ...);
 int							ft_strcmp(const char *s1, const char *s2);
@@ -103,7 +106,10 @@ char						*ft_strnew(size_t size);
 char						*ft_until_per(t_print **print);
 char						*ft_strcpy(char *dst, const char *src);
 char						*ft_strdup(const char *str);
-char						*ft_strjoin(char *s1, char *s2);
+char						*ft_strjoin(char const *s1, char const *s2);
+char						*ft_strjoin_fr_both(char *s1,
+							char *s2);
+void						*ft_free_both(void *p1, void *p2);
 void						*ft_memalloc(size_t size);
 size_t						ft_strlen(const char *s);
 void						ft_strdel(char **as);
@@ -134,7 +140,10 @@ t_buf						*ft_char(t_print *print, t_buf *for_buf, int k);
 t_buf						*print_buf(t_print *print, t_buf *for_buf, int num);
 t_buf						*filling_buf(t_print *print, t_buf *for_buf,
 		char **str);
-t_buf						*filling_buf_byspace(t_print *print, t_buf *for_buf);
+t_buf						*filling_buf_byspace(t_print *print,
+		t_buf *for_buf);
 void						ft_help_with_precision(char **d, int k);
+void						*ft_memcpy(void *destptr,
+		const void *srcptr, size_t num);
 
 #endif

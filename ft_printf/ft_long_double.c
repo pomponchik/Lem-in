@@ -6,7 +6,7 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/30 19:16:04 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/13 19:21:14 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/13 19:44:19 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static char		*ft_create_float(long double d, int i, t_print *print)
 	k = (u_q.x[0] & 0xffffffffffffffff);
 	c = ft_pow_long_x(e, k);
 	c = ft_make_precision(c, i, print);
-	c = (s == 1) ? ft_strjoin(ft_strdup("-"), c) : c;
+	c = (s == 1) ? ft_strjoin_fr_both(ft_strdup("-"), c) : c;
 	return (c);
 }
 

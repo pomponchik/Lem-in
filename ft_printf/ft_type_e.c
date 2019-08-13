@@ -6,7 +6,7 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 19:29:02 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/13 19:22:50 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/13 19:55:02 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,13 @@ char		*ft_do_work(char *d, int j, int k, char a)
 	c[0] = a;
 	number = ft_itoa(j);
 	if (ft_strlen(number) == 1)
-		number = ft_strjoin(ft_strdup("0"), number);
+		number = ft_strjoin_fr_both(ft_strdup("0"), number);
 	if (k == -1)
-		d = ft_strjoin(ft_strjoin(ft_strjoin(d, c), ft_strdup("-")), number);
+		d = ft_strjoin_fr_both(ft_strjoin(ft_strjoin(d, c),
+					ft_strdup("-")), number);
 	else if (k == 1 || k == 0)
-		d = ft_strjoin(ft_strjoin(ft_strjoin(d, c), ft_strdup("+")), number);
+		d = ft_strjoin_fr_both(ft_strjoin(ft_strjoin(d, c),
+					ft_strdup("+")), number);
 	return (d);
 }
 
@@ -78,7 +80,7 @@ static char	*ft_create_float(double d, int i, t_print *print)
 		c = ft_make_precision(ft_strdup("0.0"), i, print);
 		c = ft_do_work(c, 0, 0, print->type);
 	}
-	c = (s == 1) ? ft_strjoin(ft_strdup("-"), c) : c;
+	c = (s == 1) ? ft_strjoin_fr_both(ft_strdup("-"), c) : c;
 	return (c);
 }
 

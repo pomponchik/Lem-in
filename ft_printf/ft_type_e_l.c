@@ -6,7 +6,7 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/30 19:16:04 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/13 19:22:54 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/13 19:57:51 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,13 @@ static char		*ft_do_work(char *d, int j, int k, char a)
 	c[0] = a;
 	number = ft_itoa(j);
 	if (ft_strlen(number) == 1)
-		number = ft_strjoin(ft_strdup("0"), number);
+		number = ft_strjoin_fr_both(ft_strdup("0"), number);
 	if (k == -1)
-		d = ft_strjoin(ft_strjoin(ft_strjoin(d, c), ft_strdup("-")), number);
+		d = ft_strjoin_fr_both(ft_strjoin_fr_both
+(ft_strjoin_fr_both(d, c), ft_strdup("-")), number);
 	else if (k == 1 || k == 0)
-		d = ft_strjoin(ft_strjoin(ft_strjoin(d, c), ft_strdup("+")), number);
+		d = ft_strjoin_fr_both(ft_strjoin_fr_both
+(ft_strjoin_fr_both(d, c), ft_strdup("+")), number);
 	return (d);
 }
 
@@ -71,7 +73,7 @@ static char		*ft_create_float(long double d, int i, t_print *print)
 	k = (u_q.x[0] & 0xffffffffffffffff);
 	c = ft_pow_long_x(e, k);
 	c = ft_work(c, print, i);
-	c = (s == 1) ? ft_strjoin(ft_strdup("-"), c) : c;
+	c = (s == 1) ? ft_strjoin_fr_both(ft_strdup("-"), c) : c;
 	return (c);
 }
 
@@ -81,7 +83,7 @@ char			*ft_type_e_l(t_print *print)
 	int			i;
 
 	i = 6;
-	d = va_arg(print->ap, long double);
+	d = (long double)va_arg(print->ap, long double);
 	if (print->precision != -1)
 		i = print->precision;
 	return (ft_create_float(d, i, print));

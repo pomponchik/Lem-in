@@ -6,7 +6,7 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 22:21:30 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/13 19:21:26 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/13 19:45:08 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,9 @@ char	*ft_make_precision(char *c, int i, t_print *print)
 	if (i == -1)
 		c = only_before_dot(c, print);
 	else if (i == j)
-		c = ft_strjoin(c, ft_strdup("0"));
+		c = ft_strjoin_fr_both(c, ft_strdup("0"));
 	else if (i > j)
-		c = ft_strjoin(c, ft_strnew_zero(i - j + 1));
+		c = ft_strjoin_fr_both(c, ft_strnew_zero(i - j + 1));
 	else if (i < j)
 		c = ft_right_precision(c, i);
 	return (c);

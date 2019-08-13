@@ -6,7 +6,7 @@
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 21:47:02 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/08/13 19:15:14 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/13 19:58:38 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "../Libft/includes/libft.h"
 # include "../ft_printf/ft_printf.h"
+# include <stdio.h>
 
 typedef struct		s_graph
 {

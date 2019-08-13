@@ -6,7 +6,7 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/25 18:35:19 by hlarson           #+#    #+#             */
-/*   Updated: 2019/05/11 20:18:56 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/13 19:43:41 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	*get_with_dot(char *a)
 		i++;
 		j++;
 	}
-	return (ft_strjoin(x, y));
+	return (ft_strjoin_fr_both(x, y));
 }
 
 int		get_number(char *a, char *b, char **x, char **y)
@@ -66,9 +66,9 @@ int		get_number(char *a, char *b, char **x, char **y)
 	if (i == 0)
 		return (j);
 	if (i > j)
-		*y = ft_strjoin(*y, ft_strnew_zero(i - j));
+		*y = ft_strjoin_fr_both(*y, ft_strnew_zero(i - j));
 	else
-		*x = ft_strjoin(*x, ft_strnew_zero(j - i));
+		*x = ft_strjoin_fr_both(*x, ft_strnew_zero(j - i));
 	return ((i > j) ? i : j);
 }
 

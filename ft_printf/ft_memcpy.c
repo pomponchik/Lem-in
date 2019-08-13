@@ -6,11 +6,11 @@
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/17 03:41:39 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/08/13 19:39:18 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/13 19:40:23 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 void	*ft_memcpy(void *destptr, const void *srcptr, size_t num)
 {
