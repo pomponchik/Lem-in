@@ -16,7 +16,7 @@ static void print_swap(t_graph *donor, t_graph *recipient, t_organiser *organise
 {
 	char *str;
 
-	str = ft_strjoin("L", donor->name);
+	str = ft_strjoin_free_2("L", ft_itoa(donor->ant_number));
 	ft_lstadd(&((*organiser).commands), ft_lstnew_no_copy(str, ft_strlen(str)));
 	str = ft_strjoin("-", recipient->name);
 	ft_lstadd(&((*organiser).commands), ft_lstnew_no_copy(str, ft_strlen(str)));
@@ -32,6 +32,8 @@ static void swap_start(t_graph *recipient, t_organiser *organiser)
 	organiser->ants_field++;
 	organiser->ants--;
 	recipient->ant = 1;
+	recipient->ant_number = (organiser->start)->ant_number;
+	(organiser->start)->ant_number++;
 }
 
 static void swap_ant(t_graph *donor, t_graph *recipient, t_organiser *organiser)
@@ -48,6 +50,7 @@ static void swap_ant(t_graph *donor, t_graph *recipient, t_organiser *organiser)
 	}
 	donor->ant = 0;
 	recipient->ant = 1;
+	recipient->ant_number = donor->ant_number;
 }
 
 static int down_is(t_list *down)
