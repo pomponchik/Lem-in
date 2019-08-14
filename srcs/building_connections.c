@@ -75,10 +75,13 @@ static void replacing_links_1(t_graph *levels)
 		while (temp)
 		{
 			node = temp->content;
-			if (!node->start)
-				node->down = prove_links(node->adjacency, level);
-			else
-				node->down = start_links(node->adjacency);
+			if (!node->stop)
+			{
+				if (!node->start)
+					node->down = prove_links(node->adjacency, level);
+				else
+					node->down = start_links(node->adjacency);
+			}
 			temp = temp->next;
 		}
 		levels = levels->up;
@@ -98,7 +101,7 @@ static void replacing_links_2(t_graph *levels)
 		while (temp)
 		{
 			node = temp->content;
-			if (!node->start)
+			if (!node->start && !node->stop)
 				node->this = this_links(node->adjacency, level);
 			temp = temp->next;
 		}
