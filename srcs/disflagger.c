@@ -24,6 +24,7 @@ void disflagger(t_graph *graph, size_t count)
 			(&(graph[index]))->stop = 0;
 		else
 			(&(graph[index]))->stop = 1;
+		//(&(graph[index]))->flag = 0;
 		index++;
 	}
 }

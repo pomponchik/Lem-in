@@ -84,68 +84,53 @@ static t_graph *search_recipient_this(t_list *this)
 }
 
 //новая функция
-static int is_less(t_list *arr, size_t ants)
+static t_graph *search_recipient_start_help(t_list *down)
 {
 	t_graph *node;
-
-	while (arr)
-	{
-		node = arr->content;
-		if (node->level <= ants)
-			return (1);
-		arr = arr->next;
-	}
-	return (0);
-}
-
-//новая функция
-static t_graph *search_recipient_start(t_list *down, t_organiser *organiser)
-{
-	t_graph *node_temp;
-	t_list *down_temp;
-	int prove;
 	t_graph *result;
 
-	down_temp = down;
 	result = NULL;
 	while (down)
 	{
-		node_temp = down->content;
-		prove = is_less(down_temp, organiser->ants);
-		if ((organiser->ants > node_temp->level) && prove && !node_temp->ant)
+		node = down->content;
+		if (!node->ant)
 		{
-			if (result && result->level > node_temp->level)
-				result = node_temp;
-			else if (!result)
-				result = node_temp;
-		}
-		else if (!prove && !node_temp->ant)
-		{
-			if (result && result->level > node_temp->level)
-				result = node_temp;
-			else if (!result)
-				result = node_temp;
+			if (!result)
+				result = node;
+			else
+			{
+				if (result->level > node->level)
+					result = node;
+			}
 		}
 		down = down->next;
 	}
 	return (result);
 }
 
-static t_graph *search_recipient(t_list *down, t_list *this, t_graph *node, t_organiser *organiser)
+static t_graph *search_recipient_start(t_list *down, t_organiser *organiser)
+{
+	t_graph *result;
+
+
+	result = search_recipient_start_help(down);
+	if (result && result->level > organiser->ants)
+		return (result);
+	return (NULL);
+}
+
+static t_graph *search_recipient(t_list *down, t_list *this)
 {
 	t_graph *recipient;
 	t_graph *temp;
 	t_list *down_temp;
 
-	//вызов новой функции
-	if (node->start)
-		return (search_recipient_start(down, organiser));
 	recipient = NULL;
 	down_temp = down;
 	while (down)
 	{
 		temp = down->content;
-		if (!temp->ant)
+		if (!temp->ant && !temp->stop)
 		{
 			recipient = temp;
 			break ;
@@ -169,10 +154,10 @@ static void jump(t_graph *node, t_organiser *organiser)
 		return ;
 	down = node->down;
 	this = node->this;
-	while (node->start && organiser->ants && (recipient = search_recipient(down, this, node, organiser)))
+	while (node->start && organiser->ants && (recipient = search_recipient_start(down, organiser)))
 		swap_start(recipient, organiser);
 	if (!node->start)
-		swap_ant(node, search_recipient(down, this, node, organiser), organiser);
+		swap_ant(node, search_recipient(down, this), organiser);
 }
 
 static void to_right(t_list *level, size_t level_counter, t_organiser *organiser)
@@ -184,7 +169,7 @@ static void to_right(t_list *level, size_t level_counter, t_organiser *organiser
 	while (level)
 	{
 		node = level->content;
-		if (node->start || node->ant)
+		if (!node->stop && (node->start || node->ant))
 			jump(node, organiser);
 		level = level->next;
 	}
