@@ -21,6 +21,9 @@ int		ft_exit_adjacency(t_graph **graph, size_t *count)
 		adjacency = ((*graph)[*count - 1]).adjacency;
 		while (adjacency)
 			adjacency = ft_free_and_return(adjacency, adjacency->next);
+		free_chain_no_content((*graph)[*count - 1].this);
+        free_chain_no_content((*graph)[*count - 1].right);
+        free_chain_no_content((*graph)[*count - 1].down);
 		free(((*graph)[*count - 1]).name);
 		*count = *count - 1;
 	}

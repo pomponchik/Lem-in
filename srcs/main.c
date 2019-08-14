@@ -21,7 +21,7 @@ int	main(int argc, char **argv)
 	if (ft_validate(argv, &organiser) < 0)
 		return (main_error());
 	building_connections(&organiser);
-	print_map(&organiser);
+	//print_map(&organiser);
 	algorithm(&organiser);
 	return (0);
 }

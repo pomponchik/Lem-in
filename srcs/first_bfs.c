@@ -15,9 +15,11 @@
 static void recursive_bfs_to_end(t_list *level, char *end)
 {
 	t_list *next_level;
+	t_list *head_level;
 	t_graph *node;
 
 	next_level = NULL;
+	head_level = level;
 	while (level)
 	{
 		node = (t_graph *)(level->content);
@@ -26,7 +28,7 @@ static void recursive_bfs_to_end(t_list *level, char *end)
 			*end = 1;
 		level = level->next;
 	}
-	free_chain_no_content(level);
+	free_chain_no_content(head_level);
 	if (next_level)
 		recursive_bfs_to_end(next_level, end);
 }
@@ -74,4 +76,5 @@ void first_bfs(t_graph *graph, size_t count, t_graph *start, t_graph *finish)
 	l_0 = ft_lstnew_no_copy(finish, sizeof(t_graph));
 	recursive_bfs_to_start(l_0, 0);
 	disflagger(graph, count);
+	free_chain_no_content(l_0);
 }
