@@ -3,61 +3,59 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/25 15:59:11 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/04/13 20:17:36 by ahalmon-         ###   ########.fr       */
+/*   Created: 2018/12/01 18:18:13 by hlarson           #+#    #+#             */
+/*   Updated: 2018/12/12 18:44:44 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
-static void				add_digit(char let, long int *digit, int *error)
+static	int		sign(int k, int j)
 {
-	let -= '0';
-	if (!*digit && !let)
-		return ;
-	else if (((*digit * 10 + (long int)let) > *digit))
-		*digit = *digit * 10 + (long int)let;
+	if (k == 1)
+		return (j * (-1));
 	else
-		*error = 1;
+		return (j);
 }
 
-static int				error_checker(long int digit, int minus, int error)
+static	int		isspace(const char *str)
 {
-	if (error && minus == 1)
-		return (-1);
-	if (error && minus == -1)
-		return (0);
-	if (digit == ft_maxmin("long", "max") && minus == 1)
-		return ((int)digit);
-	return ((int)(digit * (long int)minus));
+	size_t	i;
+
+	i = 0;
+	while (str[i] == 32 || str[i] == 10 || str[i] == 9 || str[i] == 12 ||
+			str[i] == 13 || str[i] == 11)
+		i++;
+	return (i);
 }
 
-int						ft_atoi(const char *str)
+int				ft_atoi(const char *nptr)
 {
-	int					minus;
-	int					plus;
-	long int			digit;
-	int					error;
+	size_t				i;
+	unsigned long long	j;
+	int					k;
+	int					l;
 
-	minus = 1;
-	plus = 0;
-	digit = 0;
-	error = 0;
-	while (*str)
+	i = isspace(nptr) + 1;
+	j = 0;
+	k = 0;
+	l = 0;
+	if (nptr[i - 1] == '-')
+		k = 1;
+	else if (nptr[i - 1] != '+')
+		i--;
+	while (nptr[i] == '0')
+		i++;
+	while ((nptr[i] >= '0') && (nptr[i] <= '9') && nptr[i])
 	{
-		if (*str == '-' && minus == 1 && !plus && !digit)
-			minus = -1;
-		else if (*str == '+' && minus == 1 && !plus && !digit)
-			plus = 1;
-		else if (ft_isspace(*str) && !digit && minus == 1 && !plus)
-			;
-		else if (*str >= '0' && *str <= '9')
-			add_digit(*str, &digit, &error);
-		else
-			break ;
-		str++;
+		j = j * 10 + (nptr[i] - '0');
+		l++;
+		i++;
 	}
-	return (error_checker(digit, minus, error));
+	if (l > 19)
+		return (-1 + k);
+	return (sign(k, (int)(j)));
+	return (0);
 }
