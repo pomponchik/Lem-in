@@ -6,7 +6,7 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/03 17:35:58 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/10 21:38:46 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/14 12:31:40 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ static int	get_first_name(char *line, int i, t_graph *graph, size_t count)
 {
 	while (count)
 	{
-		if (ft_strncmp((graph[count - 1]).name, line, i) == 0)
+		if (ft_strncmp((graph[count - 1]).name, line, i) == 0
+				&& (graph[count - 1].name)[i] == 0)
 			return ((int)(count - 1));
 		count--;
 	}
