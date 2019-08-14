@@ -40,10 +40,10 @@ t_list *list_copy_without_flag_2(t_list *lst)
     while (lst)
     {
         node = lst->content;
-        if (!node->flag && !node->end)
+        if (!node->stop && !node->end)
         {
             ft_lstadd(&result, ft_lstnew_no_copy(node, sizeof(t_graph)));
-            node->flag = 1;
+            node->stop = 1;
         }
         lst = lst->next;
     }

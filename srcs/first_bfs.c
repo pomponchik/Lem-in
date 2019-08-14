@@ -72,7 +72,6 @@ void first_bfs(t_graph *graph, size_t count, t_graph *start, t_graph *finish)
 		ft_putstr_fd("Error: no way from start to finish.\n", 2);
 		exit(1);
 	}
-	disflagger(graph, count);
 	l_0 = ft_lstnew_no_copy(finish, sizeof(t_graph));
 	recursive_bfs_to_start(l_0, 0);
 	disflagger(graph, count);

@@ -12,6 +12,7 @@
 
 #include "lem_in.h"
 
+//функция сильно изменена
 void disflagger(t_graph *graph, size_t count)
 {
 	size_t index;
@@ -19,7 +20,10 @@ void disflagger(t_graph *graph, size_t count)
 	index = 0;
 	while (index < count)
 	{
-		(&(graph[index]))->flag = 0;
+		if ((&(graph[index]))->flag && (&(graph[index]))->stop)
+			(&(graph[index]))->stop = 0;
+		else
+			(&(graph[index]))->stop = 1;
 		index++;
 	}
 }

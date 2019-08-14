@@ -30,6 +30,7 @@ typedef struct		s_graph
     char			start;
     char			end;
 	char			flag;
+	char			stop;
     int				x;
     int				y;
 	size_t			level;

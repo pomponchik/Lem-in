@@ -50,6 +50,7 @@ static void			copy_data_from_help(t_graph *graph, t_help *tmp)
 	graph->this = NULL;
 	graph->ant = 0;
 	graph->ant_number = 1;
+	graph->stop = 0;
 }
 
 t_graph				*create_graph(t_help *help,
