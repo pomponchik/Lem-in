@@ -85,8 +85,11 @@ void free_chain_no_content(t_list *lst);
 t_list *list_copy_without_flag(t_list *lst);
 t_list *list_copy_without_flag_2(t_list *lst);
 void building_connections(t_organiser *organiser);
-void disflagger(t_graph *graph, size_t count);
+void disflagger_first(t_graph *graph, size_t count);
+void disflagger_second(t_graph *graph, size_t count, size_t level_start);
+void disflagger_base(t_graph *graph, size_t count);
 void algorithm(t_organiser *organiser);
 void	print_map(t_organiser *organiser);
+int dijkstra_prove(t_graph *node);
 
 #endif

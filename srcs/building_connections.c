@@ -44,6 +44,7 @@ t_list *this_links(t_list *lst, size_t level)
 	return (result);
 }
 
+
 //новая функция
 t_list *start_links(t_list *lst)
 {

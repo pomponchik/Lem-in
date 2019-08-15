@@ -125,5 +125,6 @@ int			ft_validate(char **argv, t_organiser *organiser)
 	if (ft_check_adjacency(asd, count) < 0)
 		return (ft_exit_adjacency(&asd, &count));
 	organiser->graph = (asd);
+	close(k);
 	return (0);
 }

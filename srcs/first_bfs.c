@@ -12,6 +12,20 @@
 
 #include "lem_in.h"
 
+// static void recursive_bfs_up(t_graph *end)
+// {
+// 	size_t level;
+// 	size_t hight;
+//
+// 	level = start->level;
+// 	hight = hight_up(end);
+// 	while (end)
+// 	{
+//
+// 		end = end->up;
+// 	}
+// }
+
 static void recursive_bfs_to_end(t_list *level, char *end)
 {
 	t_list *next_level;
@@ -44,6 +58,8 @@ static void recursive_bfs_to_start(t_list *level, size_t level_num)
 	while (level)
 	{
 		node = (t_graph *)(level->content);
+		ft_putstr(node->name);
+		ft_putstr("->");
 		if (level_num && !node->level && !node->end)
 			node->level = level_num;
 		next_level = ft_lst_join(next_level, list_copy_without_flag_2(node->adjacency));
@@ -51,6 +67,7 @@ static void recursive_bfs_to_start(t_list *level, size_t level_num)
 	}
 	if (next_level)
 	{
+		ft_putstr("\n");
 		((t_graph *)(next_level->content))->right = next_level;
 		((t_graph *)(level_temp->content))->up = next_level->content;
 		recursive_bfs_to_start(next_level, level_num + 1);
@@ -74,6 +91,7 @@ void first_bfs(t_graph *graph, size_t count, t_graph *start, t_graph *finish)
 	}
 	l_0 = ft_lstnew_no_copy(finish, sizeof(t_graph));
 	recursive_bfs_to_start(l_0, 0);
-	disflagger(graph, count);
+	disflagger_first(graph, count);
+	disflagger_second(graph, count, start->level);
 	free_chain_no_content(l_0);
 }

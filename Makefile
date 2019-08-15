@@ -20,7 +20,7 @@ FILENAMES += ft_copy_name.c ft_exit_adjacency.c ft_exit_checking.c
 FILENAMES += ft_make_adjacency.c ft_validate.c
 FILENAMES += put_first_adjacency.c ft_check_format_two.c free_chains.c
 FILENAMES += list_copy.c building_connections.c first_bfs.c
-FILENAMES += disflagger.c algorithm.c print_map.c
+FILENAMES += disflagger.c algorithm.c print_map.c dijkstra_prove.c
 NAME = lem-in
 
 SRCS	=$(addprefix srcs/, $(FILENAMES))
