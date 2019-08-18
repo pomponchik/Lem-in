@@ -27,6 +27,7 @@ typedef struct		s_graph
 	t_list	        *down;
 	t_list	        *right;
 	t_list	        *this;
+	t_list	        *start_up;
     char			start;
     char			end;
 	char			flag;
@@ -34,6 +35,9 @@ typedef struct		s_graph
     int				x;
     int				y;
 	size_t			level;
+	size_t			excess_level;
+	char			do_up;
+	char			do_down;
 }					t_graph;
 
 typedef struct		s_help
@@ -56,6 +60,8 @@ typedef struct		s_organiser
 	t_graph			*start;
 	t_graph			*end;
 	t_list	        *commands;
+	t_list			*excess;
+	size_t			level_start;
 }					t_organiser;
 
 int					ft_check_comment(char *line, t_help **help, int *start, int *end);
@@ -80,7 +86,7 @@ int                 main_error();
 int                 ft_check_adjacency(t_graph *graph, size_t count);
 int                 ft_exit_adjacency(t_graph **graph, size_t *count);
 int					help_check_line(char *c, t_help *tmp);
-void first_bfs(t_graph *graph, size_t count, t_graph *start, t_graph *finish);
+void first_bfs(t_graph *graph, size_t count, t_graph *finish, t_organiser *organiser);
 void free_chain_no_content(t_list *lst);
 t_list *list_copy_without_flag(t_list *lst);
 t_list *list_copy_without_flag_2(t_list *lst);
@@ -91,5 +97,9 @@ void disflagger_base(t_graph *graph, size_t count);
 void algorithm(t_organiser *organiser);
 void	print_map(t_organiser *organiser);
 int dijkstra_prove(t_graph *node);
+void clean_excess(t_organiser *organiser);
+size_t go_down(t_graph *node, t_organiser *organiser);
+void replacing_links_start(t_graph *start);
+t_graph *search_recipient_start(t_graph *start, t_organiser *organiser);
 
 #endif

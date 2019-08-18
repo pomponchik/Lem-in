@@ -44,25 +44,6 @@ t_list *this_links(t_list *lst, size_t level)
 	return (result);
 }
 
-
-//новая функция
-t_list *start_links(t_list *lst)
-{
-	t_graph *node;
-	t_list *result;
-
-	result = NULL;
-	while (lst)
-	{
-		node = lst->content;
-		if (!node->stop)
-			ft_lstadd(&result, ft_lstnew_no_copy(node, sizeof(t_graph)));
-		lst = lst->next;
-	}
-	return (result);
-}
-
-
 static void replacing_links_1(t_graph *levels)
 {
 	t_list *temp;
@@ -80,8 +61,6 @@ static void replacing_links_1(t_graph *levels)
 			{
 				if (!node->start)
 					node->down = prove_links(node->adjacency, level);
-				else
-					node->down = start_links(node->adjacency);
 			}
 			temp = temp->next;
 		}
@@ -110,9 +89,27 @@ static void replacing_links_2(t_graph *levels)
 	}
 }
 
+t_list *excess_filler(t_graph *graph, size_t size, size_t level_start)
+{
+	size_t index;
+	t_list *result;
+
+	index = 0;
+	result = NULL;
+	while (index < size)
+	{
+		if ((graph[index]).level > level_start)
+			ft_lstadd(&result, ft_lstnew_no_copy(&(graph[index]), sizeof(t_graph)));
+		index++;
+	}
+	return (result);
+}
+
 void building_connections(t_organiser *organiser)
 {
 	first_bfs(organiser->graph, organiser->size, organiser->start, organiser->end);
 	replacing_links_1(organiser->end);
 	replacing_links_2(organiser->end);
+	replacing_links_start(organiser->start);
+	organiser->excess = excess_filler(organiser->graph, organiser->size, organiser->level_start);
 }

@@ -84,29 +84,6 @@ static t_graph *search_recipient_this(t_list *this)
 }
 
 //новая функция
-static t_graph *search_recipient_start_help(t_list *down)
-{
-	t_graph *node;
-	t_graph *result;
-
-	result = NULL;
-	while (down)
-	{
-		node = down->content;
-		if (!node->ant && !node->stop)
-		{
-			if (!result)
-				result = node;
-			else
-			{
-				if (result->level > node->level)
-					result = node;
-			}
-		}
-		down = down->next;
-	}
-	return (result);
-}
 
 //
 // static t_graph *search_recipient_height(t_graph *node)
@@ -135,17 +112,6 @@ static t_graph *search_recipient_start_help(t_list *down)
 // 	return (result);
 // }
 
-static t_graph *search_recipient_start(t_list *down, t_organiser *organiser)
-{
-	t_graph *result;
-    t_graph *start;
-
-	result = search_recipient_start_help(down);
-	start = organiser->start;
-	if (result && start->level > result->level)
-	    return (result);
-	return (NULL);
-}
 
 static t_graph *search_recipient(t_list *down, t_list *this/*, size_t level_start, t_graph *node*/)
 {
@@ -184,7 +150,7 @@ static void jump(t_graph *node, t_organiser *organiser)
 		return ;
 	down = node->down;
 	this = node->this;
-	while (node->start && organiser->ants && (recipient = search_recipient_start(down, organiser)))
+	while (node->start && organiser->ants && (recipient = search_recipient_start(node, organiser)))
 		swap_start(recipient, organiser);
 	if (!node->start)
 		swap_ant(node, search_recipient(down, this/*, organiser->start->level, node*/), organiser);

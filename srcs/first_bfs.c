@@ -47,7 +47,7 @@ static void recursive_bfs_to_end(t_list *level, char *end)
 		recursive_bfs_to_end(next_level, end);
 }
 
-static void recursive_bfs_to_start(t_list *level, size_t level_num)
+static void recursive_bfs_to_start(t_list *level, size_t level_num, t_organiser *organiser)
 {
 	t_list *next_level;
 	t_list *level_temp;
@@ -58,6 +58,8 @@ static void recursive_bfs_to_start(t_list *level, size_t level_num)
 	while (level)
 	{
 		node = (t_graph *)(level->content);
+		if (node->start)
+			organiser->level_start = level_num;
 		ft_putstr(node->name);
 		ft_putstr("->");
 		if (level_num && !node->level && !node->end)
@@ -70,17 +72,17 @@ static void recursive_bfs_to_start(t_list *level, size_t level_num)
 		ft_putstr("\n");
 		((t_graph *)(next_level->content))->right = next_level;
 		((t_graph *)(level_temp->content))->up = next_level->content;
-		recursive_bfs_to_start(next_level, level_num + 1);
+		recursive_bfs_to_start(next_level, level_num + 1, organiser);
 	}
 }
 
-void first_bfs(t_graph *graph, size_t count, t_graph *start, t_graph *finish)
+void first_bfs(t_graph *graph, size_t count, t_graph *finish, t_organiser *organiser)
 {
 	t_list *l_0;
 	char end;
 
 	end = 0;
-	l_0 = ft_lstnew_no_copy(start, sizeof(t_graph));
+	l_0 = ft_lstnew_no_copy(organiser->start, sizeof(t_graph));
 	graph->flag = 1;
 	recursive_bfs_to_end(l_0, &end);
 	if (!end)
@@ -90,8 +92,8 @@ void first_bfs(t_graph *graph, size_t count, t_graph *start, t_graph *finish)
 		exit(1);
 	}
 	l_0 = ft_lstnew_no_copy(finish, sizeof(t_graph));
-	recursive_bfs_to_start(l_0, 0);
+	recursive_bfs_to_start(l_0, 0, organiser);
 	disflagger_first(graph, count);
-	disflagger_second(graph, count, start->level);
+	disflagger_second(graph, count, (organiser->start)->level);
 	free_chain_no_content(l_0);
 }
