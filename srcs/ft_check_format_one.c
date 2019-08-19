@@ -45,7 +45,7 @@ static int		ft_check_name(t_help *help, t_help *tmp)
 {
 	while (tmp != help && tmp)
 	{
-		if (ft_strcmp(tmp->name, help->name) == 0)
+		if (ft_strcmp(tmp->name, help->name) == 0 || tmp->name[0] == 'L')
 			return (-1);
 		tmp = tmp->next;
 	}

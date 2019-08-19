@@ -38,6 +38,7 @@ typedef struct		s_graph
 	size_t			excess_level;
 	char			do_up;
 	char			do_down;
+	char			do_this;
 }					t_graph;
 
 typedef struct		s_help
@@ -101,5 +102,12 @@ void clean_excess(t_organiser *organiser);
 size_t go_down(t_graph *node, t_organiser *organiser);
 void replacing_links_start(t_graph *start);
 t_graph *search_recipient_start(t_graph *start, t_organiser *organiser);
+void print_swap(t_graph *donor, t_graph *recipient, t_organiser *organiser);
+void swap_start(t_organiser *organiser);
+int down_is(t_list *down);
+t_graph *search_recipient_usual(t_graph *node, t_organiser *organiser);
+t_list *excess_filler(t_graph *graph, size_t size, size_t level_start);
+t_graph *search_recipient_over_do(t_graph *node);
+t_graph *search_recipient_over(t_graph *node, t_organiser *organiser);
 
 #endif

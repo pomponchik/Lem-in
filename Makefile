@@ -22,7 +22,9 @@ FILENAMES += put_first_adjacency.c ft_check_format_two.c free_chains.c
 FILENAMES += list_copy.c building_connections.c first_bfs.c
 FILENAMES += disflagger.c algorithm.c print_map.c dijkstra_prove.c
 FILENAMES += clean_excess.c search_recipient_start.c go_down.c
-FILENAMES += replacing_links_start.c
+FILENAMES += replacing_links_start.c swap_start.c down_is.c
+FILENAMES += search_recipient_usual.c search_recipient_over.c excess_filler.c
+FILENAMES += search_recipient_over_do.c
 NAME = lem-in
 
 SRCS	=$(addprefix srcs/, $(FILENAMES))

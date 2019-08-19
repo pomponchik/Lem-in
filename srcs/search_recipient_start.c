@@ -19,7 +19,7 @@ static t_graph *search_recipient_start_do(t_list *up)
 	while (up)
 	{
 		node = up->content;
-		if (!node->ant && node->do_up)
+		if (!node->stop && !node->ant && node->do_up)
 			return (node);
 		up = up->next;
 	}
@@ -31,7 +31,6 @@ static t_graph *search_recipient_start_up(t_list *up, t_graph *start, t_organise
 	t_graph *node;
 	t_graph *result;
 	size_t result_distance;
-	size_t temp_distance;
 
 	if (!up)
 		return (NULL);
@@ -41,19 +40,26 @@ static t_graph *search_recipient_start_up(t_list *up, t_graph *start, t_organise
 	while (up)
 	{
 		node = up->content;
-		temp_distance = go_down(start, organiser);
-		if (!result_distance)
+		if (!node->ant && !node->stop)
 		{
-			result_distance = temp_distance;
-			result = node;
-		}
-		else if (temp_distance < result_distance)
-		{
-			result_distance = temp_distance;
-			result = node;
+			node->excess_level = go_down(start, organiser);
+			if (!node->excess_level)
+				node->stop = 1;
+			if (!result_distance && !node->stop)
+			{
+				result_distance = node->excess_level;
+				result = node;
+			}
+			else if (node->excess_level < result_distance && !node->stop)
+			{
+				result_distance = node->excess_level;
+				result = node;
+			}
 		}
 		up = up->next;
 	}
+	if (result)
+		result->do_up = 1;
 	return (result);
 }
 
@@ -66,7 +72,7 @@ static t_graph *search_recipient_start_down(t_list *down)
 	while (down)
 	{
 		node = down->content;
-		if (!node->ant)
+		if (!node->ant && !node->stop)
 			return (node);
 		down = down->next;
 	}
@@ -82,7 +88,7 @@ static t_graph *search_recipient_start_this(t_list *this)
 	while (this)
 	{
 		node = this->content;
-		if (!node->ant)
+		if (!node->ant && !node->stop && down_is(node->down))
 			return (node);
 		this = this->next;
 	}
