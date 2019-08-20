@@ -20,7 +20,7 @@ static t_graph *search_new_way(t_graph *node, t_organiser *organiser)
 	size_t steps;
 	t_graph *result;
 
-	adjacency - node->adjacency;
+	adjacency = node->adjacency;
 	steps = 0;
 	result = NULL;
 	while (adjacency)
@@ -28,7 +28,9 @@ static t_graph *search_new_way(t_graph *node, t_organiser *organiser)
 		node_temp = adjacency->content;
 		if (!node->stop && !node->start && !node->ant)
 		{
-			temp_steps = go_down(t_graph *node, t_organiser *organiser);
+			if (node_temp->level <= organiser->level_start)
+				return (node_temp);
+			temp_steps = go_down(node_temp, organiser);
 			if (temp_steps)
 			{
 				if (temp_steps < steps || !steps)
@@ -49,7 +51,7 @@ t_graph *search_recipient_over(t_graph *node, t_organiser *organiser)
 
 	if ((result = search_recipient_over_do(node)))
 		return (result);
-	if ((result = search_new_way(node)))
+	if ((result = search_new_way(node, organiser)))
 	{
 		if (result->level > node->level)
 			result->do_up = 1;
