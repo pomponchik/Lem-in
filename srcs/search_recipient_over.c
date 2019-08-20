@@ -26,11 +26,12 @@ static t_graph *search_new_way(t_graph *node, t_organiser *organiser)
 	while (adjacency)
 	{
 		node_temp = adjacency->content;
-		if (!node->stop && !node->start && !node->ant)
+		if (!node_temp->stop && !node_temp->start && !node_temp->ant)
 		{
 			if (node_temp->level <= organiser->level_start)
 				return (node_temp);
 			temp_steps = go_down(node_temp, organiser);
+			node_temp->excess_level = temp_steps;
 			if (temp_steps)
 			{
 				if (temp_steps < steps || !steps)
@@ -39,6 +40,8 @@ static t_graph *search_new_way(t_graph *node, t_organiser *organiser)
 					result = node;
 				}
 			}
+			else if (node_temp)
+				node_temp->stop = 1;
 		}
 		adjacency = adjacency->next;
 	}
@@ -59,6 +62,7 @@ t_graph *search_recipient_over(t_graph *node, t_organiser *organiser)
 			result->do_down = 1;
 		if (result->level == node->level)
 			result->do_this = 1;
+		organiser->sorted = insert_in_sorted(organiser->sorted, result);
 		return (result);
 	}
 	return (NULL);

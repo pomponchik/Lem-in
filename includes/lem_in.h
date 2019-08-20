@@ -62,6 +62,7 @@ typedef struct		s_organiser
 	t_graph			*end;
 	t_list	        *commands;
 	t_list			*excess;
+	t_list			*sorted;
 	size_t			level_start;
 }					t_organiser;
 
@@ -109,5 +110,8 @@ t_graph *search_recipient_usual(t_graph *node, t_organiser *organiser);
 t_list *excess_filler(t_graph *graph, size_t size, size_t level_start);
 t_graph *search_recipient_over_do(t_graph *node);
 t_graph *search_recipient_over(t_graph *node, t_organiser *organiser);
+void outers(t_organiser *organiser);
+t_list *insert_in_sorted(t_list *sorted, t_graph *node);
+void swap_ant(t_graph *donor, t_graph *recipient, t_organiser *organiser);
 
 #endif

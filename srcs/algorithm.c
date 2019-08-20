@@ -24,7 +24,7 @@ void print_swap(t_graph *donor, t_graph *recipient, t_organiser *organiser)
 	ft_lstadd(&((*organiser).commands), ft_lstnew_no_copy(str, ft_strlen(str)));
 }
 
-static void swap_ant(t_graph *donor, t_graph *recipient, t_organiser *organiser)
+void swap_ant(t_graph *donor, t_graph *recipient, t_organiser *organiser)
 {
 	if (!recipient)
 		return ;
@@ -61,7 +61,7 @@ static void to_start(t_graph *level, t_organiser *organiser)
 	size_t counter;
 
 	counter = 0;
-	while (level)
+	while (level && level->level <= organiser->level_start)
 	{
 		to_right(level->right, counter, organiser);
 		counter++;
@@ -76,10 +76,10 @@ void algorithm(t_organiser *organiser)
 
 	ants = organiser->ants;
 	ft_putstr("\n");
-	organiser->commands = NULL;
 	while (organiser->ants_end != ants)
 	{
 		to_start(organiser->end, organiser);
+		outers(organiser);
 		swap_start(organiser);
 		str = ft_strdup("\n");
 		ft_lstadd(&((*organiser).commands), ft_lstnew_no_copy(str, 1));

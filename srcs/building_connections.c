@@ -91,4 +91,6 @@ void building_connections(t_organiser *organiser)
 	replacing_links(organiser->end, organiser->level_start);
 	replacing_links_start(organiser->start);
 	organiser->excess = excess_filler(organiser->graph, organiser->size, organiser->level_start);
+	organiser->sorted = NULL;
+	organiser->commands = NULL;
 }

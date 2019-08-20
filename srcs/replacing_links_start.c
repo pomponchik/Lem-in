@@ -21,7 +21,7 @@ static t_list *replacing_links_start_down(t_list *adjacency, size_t start_level)
 	while (adjacency)
 	{
 		node = adjacency->content;
-		if (node->level < start_level)
+		if (node->level < start_level && !node->stop)
 			ft_lstadd(&result, ft_lstnew_no_copy(node, sizeof(t_graph)));
 		adjacency = adjacency->next;
 	}
@@ -37,7 +37,7 @@ static t_list *replacing_links_start_this(t_list *adjacency, size_t start_level)
 	while (adjacency)
 	{
 		node = adjacency->content;
-		if (node->level == start_level)
+		if (node->level == start_level && !node->stop)
 			ft_lstadd(&result, ft_lstnew_no_copy(node, sizeof(t_graph)));
 		adjacency = adjacency->next;
 	}
@@ -53,7 +53,7 @@ static t_list *replacing_links_start_start_up(t_list *adjacency, size_t start_le
 	while (adjacency)
 	{
 		node = adjacency->content;
-		if (node->level > start_level)
+		if (node->level > start_level && !node->stop)
 			ft_lstadd(&result, ft_lstnew_no_copy(node, sizeof(t_graph)));
 		adjacency = adjacency->next;
 	}

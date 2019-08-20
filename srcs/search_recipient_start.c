@@ -59,7 +59,10 @@ static t_graph *search_recipient_start_up(t_list *up, t_graph *start, t_organise
 		up = up->next;
 	}
 	if (result)
+	{
 		result->do_up = 1;
+		organiser->sorted = insert_in_sorted(organiser->sorted, result);
+	}
 	return (result);
 }
 
@@ -101,9 +104,9 @@ t_graph *search_recipient_start(t_graph *start, t_organiser *organiser)
 
 	if ((result = search_recipient_start_down(start->down)))
 		return (result);
-	if ((result = search_recipient_start_this(start->down)))
+	if ((result = search_recipient_start_this(start->this)))
 		return (result);
-	if ((result = search_recipient_start_up(start->down, start, organiser)))
+	if ((result = search_recipient_start_up(start->start_up, start, organiser)))
 		return (result);
 	return (NULL);
 }

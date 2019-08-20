@@ -33,8 +33,6 @@ void swap_start(t_organiser *organiser)
 
 	while (organiser->ants && (recipient = search_recipient_start(organiser->start, organiser)))
 	{
-		if (!recipient)
-			return ;
 		if (recipient->level > organiser->level_start)
 		{
 			if (organiser->level_start + recipient->excess_level > organiser->ants)
