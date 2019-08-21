@@ -41,11 +41,38 @@ static t_graph *search_new_way(t_graph *node, t_organiser *organiser)
 				}
 			}
 			else if (node_temp)
-				node_temp->stop = 1;
+				node_temp->stand = 1;
 		}
 		adjacency = adjacency->next;
 	}
 	return (result);
+}
+
+static t_graph *search_down_no_do(t_list *down, size_t level_start)
+{
+    t_graph *node;
+
+    while (down)
+    {
+        node = down->content;
+        if (node->level < level_start)
+            return (node);
+        down = down->next;
+    }
+    return (NULL);
+}
+
+void flags_to_stop(t_list *adjacency)
+{
+	t_graph *node;
+
+	while (adjacency)
+	{
+		node = adjacency->content;
+		if (node->stand)
+			node->stop = 1;
+		adjacency = adjacency->next;
+	}
 }
 
 t_graph *search_recipient_over(t_graph *node, t_organiser *organiser)
@@ -54,7 +81,9 @@ t_graph *search_recipient_over(t_graph *node, t_organiser *organiser)
 
 	if ((result = search_recipient_over_do(node)))
 		return (result);
-	if ((result = search_new_way(node, organiser)))
+	if ((result = search_down_no_do(node->down, organiser->level_start)))
+	    return (result);
+	if (!node->stand && (result = search_new_way(node, organiser)))
 	{
 		if (result->level > node->level)
 			result->do_up = 1;
@@ -63,6 +92,7 @@ t_graph *search_recipient_over(t_graph *node, t_organiser *organiser)
 		if (result->level == node->level)
 			result->do_this = 1;
 		organiser->sorted = insert_in_sorted(organiser->sorted, result);
+		flags_to_stop(node->adjacency);
 		return (result);
 	}
 	return (NULL);

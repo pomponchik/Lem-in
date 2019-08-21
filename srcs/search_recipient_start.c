@@ -44,7 +44,12 @@ static t_graph *search_recipient_start_up(t_list *up, t_graph *start, t_organise
 		{
 			node->excess_level = go_down(start, organiser);
 			if (!node->excess_level)
-				node->stop = 1;
+			{
+				node->stand = 1;
+				//printf("m1\n");
+			}
+			// else
+			// 	printf("m2\n");
 			if (!result_distance && !node->stop)
 			{
 				result_distance = node->excess_level;
@@ -107,6 +112,9 @@ t_graph *search_recipient_start(t_graph *start, t_organiser *organiser)
 	if ((result = search_recipient_start_this(start->this)))
 		return (result);
 	if ((result = search_recipient_start_up(start->start_up, start, organiser)))
+	{
+		flags_to_stop(start->adjacency);
 		return (result);
+	}
 	return (NULL);
 }

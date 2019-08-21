@@ -56,6 +56,8 @@ static void			copy_data_from_help(t_graph *graph, t_help *tmp)
 	graph->do_down = 0;
 	graph->start_up = NULL;
 	graph->do_this = 0;
+	graph->stand = 0;
+	graph->unmove = 0;
 }
 
 t_graph				*create_graph(t_help *help,

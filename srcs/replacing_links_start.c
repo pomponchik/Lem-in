@@ -53,8 +53,13 @@ static t_list *replacing_links_start_start_up(t_list *adjacency, size_t start_le
 	while (adjacency)
 	{
 		node = adjacency->content;
+		//printf("name: %s\n", node->name);
 		if (node->level > start_level && !node->stop)
+		{
+			//printf("j1\n");
 			ft_lstadd(&result, ft_lstnew_no_copy(node, sizeof(t_graph)));
+		}
+
 		adjacency = adjacency->next;
 	}
 	return (result);

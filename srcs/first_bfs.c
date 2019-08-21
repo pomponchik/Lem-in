@@ -95,5 +95,6 @@ void first_bfs(t_graph *graph, size_t count, t_graph *finish, t_organiser *organ
 	recursive_bfs_to_start(l_0, 0, organiser);
 	disflagger_first(graph, count);
 	disflagger_second(graph, count, (organiser->start)->level);
+	disflagger_base(graph, count);
 	free_chain_no_content(l_0);
 }

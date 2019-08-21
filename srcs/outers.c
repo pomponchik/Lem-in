@@ -23,7 +23,7 @@ void outers(t_organiser *organiser)
 	while (nodes)
 	{
 		node = nodes->content;
-		if (!node->stop && node->ant)
+		if (node->ant)
 			swap_ant(node, search_recipient_over(node, organiser), organiser);
 		nodes = nodes->next;
 	}

@@ -50,11 +50,11 @@ char check_connections(t_graph *node, t_graph *all, size_t size_all, size_t leve
 		return (1);
 	if (not_low(node, level_start))
 		return (0);
-	if (!dijkstra_prove(node))
-	{
-		disflagger_base(all, size_all);
-		return (1);
-	}
+	// if (!dijkstra_prove(node))
+	// {
+	// 	disflagger_base(all, size_all);
+	// 	return (1);
+	// }
 	disflagger_base(all, size_all);
 	return (0);
 }

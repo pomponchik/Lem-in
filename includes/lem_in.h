@@ -39,6 +39,8 @@ typedef struct		s_graph
 	char			do_up;
 	char			do_down;
 	char			do_this;
+	char			stand;
+	char			unmove;
 }					t_graph;
 
 typedef struct		s_help
@@ -113,5 +115,6 @@ t_graph *search_recipient_over(t_graph *node, t_organiser *organiser);
 void outers(t_organiser *organiser);
 t_list *insert_in_sorted(t_list *sorted, t_graph *node);
 void swap_ant(t_graph *donor, t_graph *recipient, t_organiser *organiser);
+void flags_to_stop(t_list *adjacency);
 
 #endif

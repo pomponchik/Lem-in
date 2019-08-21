@@ -18,6 +18,8 @@ static char insert(t_list *new, t_list *current, t_list *previous)
 	t_graph *node_current;
 	t_graph *node_previous;
 
+	if (!previous)
+		return (0);
 	node_new = new->content;
 	node_current = current->content;
 	node_previous = previous->content;
@@ -44,7 +46,7 @@ t_list *insert_in_sorted(t_list *sorted, t_graph *node)
 	if (!sorted)
 		return (new);
 	node_temp = sorted->content;
-	if (node->excess_level < node_temp->excess_level)
+	if (node->excess_level <= node_temp->excess_level)
 	{
 		new->next = sorted;
 		return (new);
