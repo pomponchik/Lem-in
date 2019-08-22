@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   clean_excess.c                                     :+:      :+:    :+:   */
+/*   stopper.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/18 20:47:03 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/08/18 20:47:05 by ahalmon-         ###   ########.fr       */
+/*   Created: 2019/08/22 23:46:14 by ahalmon-          #+#    #+#             */
+/*   Updated: 2019/08/22 23:46:15 by ahalmon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-void clean_excess(t_organiser *organiser)
+void stopper(t_list *way)
 {
-	t_list *excess;
 	t_graph *node;
 
-	excess = organiser->excess;
-	while (excess)
+	while (way)
 	{
-		node = excess->content;
-		node->flag = 0;
-		excess = excess->next;
+		node = way->content;
+		printf("%s->", node->name);
+		if (!node->start && !node->stop)
+			node->stop = 1;
+		way = way->next;
 	}
+	printf("\n");
 }

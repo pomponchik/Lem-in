@@ -23,24 +23,13 @@ typedef struct		s_graph
 	char			ant;
     int				ant_number;
     t_list	        *adjacency;
-	struct s_graph	*up;
-	t_list	        *down;
-	t_list	        *right;
-	t_list	        *this;
-	t_list	        *start_up;
     char			start;
     char			end;
 	char			flag;
-	char			stop;
     int				x;
     int				y;
-	size_t			level;
-	size_t			excess_level;
-	char			do_up;
-	char			do_down;
-	char			do_this;
-	char			stand;
-	char			unmove;
+	struct s_graph *parent;
+	char			stop;
 }					t_graph;
 
 typedef struct		s_help
@@ -63,9 +52,7 @@ typedef struct		s_organiser
 	t_graph			*start;
 	t_graph			*end;
 	t_list	        *commands;
-	t_list			*excess;
-	t_list			*sorted;
-	size_t			level_start;
+	t_list			*ways;
 }					t_organiser;
 
 int					ft_check_comment(char *line, t_help **help, int *start, int *end);
@@ -90,31 +77,17 @@ int                 main_error();
 int                 ft_check_adjacency(t_graph *graph, size_t count);
 int                 ft_exit_adjacency(t_graph **graph, size_t *count);
 int					help_check_line(char *c, t_help *tmp);
-void first_bfs(t_graph *graph, size_t count, t_graph *finish, t_organiser *organiser);
-void free_chain_no_content(t_list *lst);
-t_list *list_copy_without_flag(t_list *lst);
-t_list *list_copy_without_flag_2(t_list *lst);
-void building_connections(t_organiser *organiser);
-void disflagger_first(t_graph *graph, size_t count);
-void disflagger_second(t_graph *graph, size_t count, size_t level_start);
-void disflagger_base(t_graph *graph, size_t count);
+void free_chain(t_list *lst);
 void algorithm(t_organiser *organiser);
 void	print_map(t_organiser *organiser);
-int dijkstra_prove(t_graph *node);
-void clean_excess(t_organiser *organiser);
-size_t go_down(t_graph *node, t_organiser *organiser);
-void replacing_links_start(t_graph *start);
-t_graph *search_recipient_start(t_graph *start, t_organiser *organiser);
 void print_swap(t_graph *donor, t_graph *recipient, t_organiser *organiser);
-void swap_start(t_organiser *organiser);
-int down_is(t_list *down);
-t_graph *search_recipient_usual(t_graph *node, t_organiser *organiser);
-t_list *excess_filler(t_graph *graph, size_t size, size_t level_start);
-t_graph *search_recipient_over_do(t_graph *node);
-t_graph *search_recipient_over(t_graph *node, t_organiser *organiser);
-void outers(t_organiser *organiser);
-t_list *insert_in_sorted(t_list *sorted, t_graph *node);
-void swap_ant(t_graph *donor, t_graph *recipient, t_organiser *organiser);
-void flags_to_stop(t_list *adjacency);
+void swap(t_graph *donor, t_graph *recipient, t_organiser *organiser);
+void bfs(t_organiser *organiser);
+void no_ways(t_graph **graph, size_t *count);
+t_list *list_copy(t_list *lst, t_graph *parent);
+void disflagger(t_graph *nodes, size_t count);
+void walking_ants(t_organiser *organiser);
+void no_way(t_graph **graph, size_t *count);
+void stopper(t_list *way);
 
 #endif

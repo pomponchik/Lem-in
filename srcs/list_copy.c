@@ -12,26 +12,7 @@
 
 #include "lem_in.h"
 
-t_list *list_copy_without_flag(t_list *lst)
-{
-	t_graph *node;
-	t_list *result;
-
-	result = NULL;
-	while (lst)
-	{
-		node = lst->content;
-		if (!node->flag)
-		{
-			ft_lstadd(&result, ft_lstnew_no_copy(node, sizeof(t_graph)));
-			node->flag = 1;
-		}
-		lst = lst->next;
-	}
-	return (result);
-}
-
-t_list *list_copy_without_flag_2(t_list *lst)
+t_list *list_copy(t_list *lst, t_graph *parent)
 {
     t_graph *node;
     t_list *result;
@@ -40,10 +21,11 @@ t_list *list_copy_without_flag_2(t_list *lst)
     while (lst)
     {
         node = lst->content;
-        if (!node->stop && !node->end)
+        if (!node->end && !node->flag && !node->stop)
         {
+			node->parent = parent;
             ft_lstadd(&result, ft_lstnew_no_copy(node, sizeof(t_graph)));
-            node->stop = 1;
+            node->flag = 1;
         }
         lst = lst->next;
     }

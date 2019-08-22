@@ -12,7 +12,7 @@
 
 #include "lem_in.h"
 
-static void swap_start_swap(t_graph *recipient, t_organiser *organiser)
+static void swap_start(t_graph *recipient, t_organiser *organiser)
 {
 	if (!recipient)
 		return ;
@@ -27,17 +27,24 @@ static void swap_start_swap(t_graph *recipient, t_organiser *organiser)
 	(organiser->start)->ant_number++;
 }
 
-void swap_start(t_organiser *organiser)
+void swap(t_graph *donor, t_graph *recipient, t_organiser *organiser)
 {
-	t_graph *recipient;
-
-	while (organiser->ants && (recipient = search_recipient_start(organiser->start, organiser)))
+	if (!recipient)
+		return ;
+	if (donor->start)
 	{
-		if (recipient->level > organiser->level_start)
-		{
-			if (organiser->level_start + recipient->excess_level > organiser->ants)
-				return ;
-		}
-		swap_start_swap(recipient, organiser);
+		swap_start(recipient, organiser);
+		return ;
 	}
+	print_swap(donor, recipient, organiser);
+	if (recipient->end)
+	{
+		organiser->ants_field--;
+		organiser->ants_end++;
+		donor->ant = 0;
+		return ;
+	}
+	donor->ant = 0;
+	recipient->ant = 1;
+	recipient->ant_number = donor->ant_number;
 }

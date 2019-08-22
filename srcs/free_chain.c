@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_chains.c                                      :+:      :+:    :+:   */
+/*   free_chain.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "lem_in.h"
 
-void free_chain_no_content(t_list *lst)
+void free_chain(t_list *lst)
 {
 	t_list *temp;
 

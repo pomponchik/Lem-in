@@ -44,20 +44,9 @@ static void			copy_data_from_help(t_graph *graph, t_help *tmp)
 	graph->y = tmp->y;
 	graph->adjacency = NULL;
 	graph->flag = 0;
-	graph->up = NULL;
-	graph->down = NULL;
-	graph->right = NULL;
-	graph->this = NULL;
-	graph->ant = 0;
-	graph->ant_number = 1;
 	graph->stop = 0;
-	graph->excess_level = 0;
-	graph->do_up = 0;
-	graph->do_down = 0;
-	graph->start_up = NULL;
-	graph->do_this = 0;
-	graph->stand = 0;
-	graph->unmove = 0;
+	graph->parent = NULL;
+	graph->ant_number = 1;
 }
 
 t_graph				*create_graph(t_help *help,
