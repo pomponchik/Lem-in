@@ -14,7 +14,7 @@
 
 static void swap_start(t_graph *recipient, t_organiser *organiser)
 {
-	if (!recipient)
+	if (!recipient || !organiser->ants)
 		return ;
 	print_swap(organiser->start, recipient, organiser);
 	if (!recipient->end)

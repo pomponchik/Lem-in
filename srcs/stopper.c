@@ -19,10 +19,10 @@ void stopper(t_list *way)
 	while (way)
 	{
 		node = way->content;
-		printf("%s->", node->name);
-		if (!node->start && !node->stop)
+		//printf("%s->", node->name);
+		if (!node->start && !node->end)
 			node->stop = 1;
 		way = way->next;
 	}
-	printf("\n");
+	//printf("\n");
 }
