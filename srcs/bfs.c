@@ -80,5 +80,6 @@ void bfs(t_organiser *organiser)
 	ways = get_ways(organiser->end, organiser);
 	if (!ways)
 		no_way(&(organiser->graph), &(organiser->size));
+	organiser->short_way = ways->content_size;
 	organiser->ways = ways;
 }

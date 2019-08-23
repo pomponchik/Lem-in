@@ -53,6 +53,7 @@ typedef struct		s_organiser
 	t_graph			*end;
 	t_list	        *commands;
 	t_list			*ways;
+	size_t			short_way;
 }					t_organiser;
 
 int					ft_check_comment(char *line, t_help **help, int *start, int *end);
@@ -81,7 +82,7 @@ void free_chain(t_list *lst);
 void algorithm(t_organiser *organiser);
 void	print_map(t_organiser *organiser);
 void print_swap(t_graph *donor, t_graph *recipient, t_organiser *organiser);
-void swap(t_graph *donor, t_graph *recipient, t_organiser *organiser);
+void swap(t_graph *donor, t_graph *recipient, t_organiser *organiser, size_t way_size);
 void bfs(t_organiser *organiser);
 void no_ways(t_graph **graph, size_t *count);
 t_list *list_copy(t_list *lst, t_graph *parent);
