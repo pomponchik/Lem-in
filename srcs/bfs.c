@@ -6,15 +6,15 @@
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/22 19:59:11 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/08/22 19:59:13 by ahalmon-         ###   ########.fr       */
+/*   Updated: 2019/08/30 22:40:02 by ahalmon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-static t_list *create_way(t_graph *start)
+static t_list	*create_way(t_graph *start)
 {
-	t_list *result;
+	t_list		*result;
 
 	result = NULL;
 	while (start)
@@ -25,12 +25,12 @@ static t_list *create_way(t_graph *start)
 	return (result);
 }
 
-static t_list *new_way(t_list *level)
+static t_list	*new_way(t_list *level)
 {
-	t_list *next_level;
-	t_list *level_temp;
-	t_list *result;
-	t_graph *node;
+	t_list		*next_level;
+	t_list		*level_temp;
+	t_list		*result;
+	t_graph		*node;
 
 	next_level = NULL;
 	result = NULL;
@@ -54,17 +54,15 @@ static t_list *new_way(t_list *level)
 	return (NULL);
 }
 
-static t_list *get_ways(t_graph *end, t_organiser *organiser)
+static t_list	*get_ways(t_graph *end, t_organiser *organiser)
 {
-	t_list *result;
-	t_list *way;
-	t_list *temp;
+	t_list		*result;
+	t_list		*way;
+	t_list		*temp;
 
 	result = NULL;
-	//int i = 0;
 	while ((way = new_way(ft_lstnew_no_copy(end, sizeof(t_graph)))))
 	{
-		//printf("g%d\n", i++);
 		stopper(way);
 		temp = ft_lstnew_no_copy(way, ft_lst_chain_len(way));
 		ft_lstadd(&result, temp);
@@ -73,9 +71,9 @@ static t_list *get_ways(t_graph *end, t_organiser *organiser)
 	return (ft_lst_turn(result));
 }
 
-void bfs(t_organiser *organiser)
+void			bfs(t_organiser *organiser)
 {
-	t_list *ways;
+	t_list		*ways;
 
 	ways = get_ways(organiser->end, organiser);
 	if (!ways)

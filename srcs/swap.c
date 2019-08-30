@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_start.c                                       :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 20:09:35 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/08/19 20:09:37 by ahalmon-         ###   ########.fr       */
+/*   Updated: 2019/08/30 22:23:25 by ahalmon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-static void swap_start(t_graph *recipient, t_organiser *organiser, size_t way_size)
+static void	swap_start(t_graph *recipient, t_organiser *organiser, size_t go)
 {
-	if (!recipient || !organiser->ants)
-		return ;
-	if (!((way_size == organiser->short_way) || (organiser->short_way - 1 + organiser->ants - 1 >= way_size - 1)))
+	if (!recipient || !organiser->ants || !go)
 		return ;
 	print_swap(organiser->start, recipient, organiser);
 	if (!recipient->end)
@@ -29,13 +27,14 @@ static void swap_start(t_graph *recipient, t_organiser *organiser, size_t way_si
 	(organiser->start)->ant_number++;
 }
 
-void swap(t_graph *donor, t_graph *recipient, t_organiser *organiser, size_t way_size)
+void		swap(t_graph *donor, t_graph *recipient, \
+	t_organiser *organiser, size_t go)
 {
 	if (!recipient)
 		return ;
 	if (donor->start)
 	{
-		swap_start(recipient, organiser, way_size);
+		swap_start(recipient, organiser, go);
 		return ;
 	}
 	print_swap(donor, recipient, organiser);

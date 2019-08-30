@@ -21,6 +21,7 @@ FILENAMES += ft_make_adjacency.c ft_validate.c stopper.c
 FILENAMES += put_first_adjacency.c ft_check_format_two.c free_chain.c
 FILENAMES += algorithm.c print_map.c list_copy.c swap.c bfs.c
 FILENAMES += disflagger.c no_ways.c walking_ants.c print_swap.c
+FILENAMES += get_num_path.c
 NAME = lem-in
 
 SRCS	=$(addprefix srcs/, $(FILENAMES))
