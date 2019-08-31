@@ -6,13 +6,13 @@
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 20:09:35 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/08/30 22:23:25 by ahalmon-         ###   ########.fr       */
+/*   Updated: 2019/08/31 20:16:33 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-void	swap_start(t_graph *recipient, t_organiser *organiser, size_t go)
+void		swap_start(t_graph *recipient, t_organiser *organiser, size_t go)
 {
 	if (!recipient || !organiser->ants || !go)
 		return ;

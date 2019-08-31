@@ -6,7 +6,7 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/24 19:58:21 by hlarson           #+#    #+#             */
-/*   Updated: 2019/07/05 20:38:13 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/08/31 21:10:29 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,6 +120,6 @@ int					get_next_line(const int fd, char **line)
 		}
 	}
 	if (copy(line, a, c, buf) == -1 && ret < BUFF_SIZE)
-		return (0);
+		return ((int)ft_free_both(list->content, list));
 	return (1);
 }

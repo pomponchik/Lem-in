@@ -6,7 +6,7 @@
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 21:47:02 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/08/31 17:28:22 by ahalmon-         ###   ########.fr       */
+/*   Updated: 2019/08/31 20:53:32 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define LEM_IN_H
 
 # include "../Libft/includes/libft.h"
-# include "../ft_printf/ft_printf.h"
 # include <stdio.h>
 
 typedef struct		s_graph
