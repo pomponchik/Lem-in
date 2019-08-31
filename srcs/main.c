@@ -20,7 +20,8 @@ int	main(int argc, char **argv)
 		return (arg_equal_one());
 	if (ft_validate(argv, &organiser) < 0)
 		return (main_error());
-	bfs(&organiser);
+	bfs(&organiser, argv[1]);
+	print_file(argv[1]);
 	//print_map(&organiser);
 	algorithm(&organiser);
 	return (0);

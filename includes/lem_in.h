@@ -6,7 +6,7 @@
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 21:47:02 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/08/31 16:39:31 by ahalmon-         ###   ########.fr       */
+/*   Updated: 2019/08/31 17:28:22 by ahalmon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,8 +92,9 @@ void				print_swap(t_graph *donor, \
 	t_graph *recipient, t_organiser *organiser);
 void				swap(t_graph *donor, t_graph *recipient, \
 	t_organiser *organiser, size_t way_size);
-void				bfs(t_organiser *organiser);
+void				bfs(t_organiser *organiser, char *filename);
 void				no_ways(t_graph **graph, size_t *count);
+void				one_way(t_graph **graph, size_t *count);
 t_list				*list_copy(t_list *lst, t_graph *parent);
 void				disflagger(t_graph *nodes, size_t count);
 void				walking_ants(t_organiser *organiser, size_t **lens);
@@ -101,5 +102,9 @@ void				no_way(t_graph **graph, size_t *count);
 void				stopper(t_list *way);
 size_t				get_num_path(t_list *paths, size_t **nums, size_t ant);
 void				free_ways(t_list *ways);
+int					one_to_one(t_organiser *organiser, char *filename);
+void				print_file(char *filename);
+void				swap_start(t_graph *recipient, \
+	t_organiser *organiser, size_t go);
 
 #endif

@@ -107,6 +107,6 @@ size_t			get_num_path(t_list *paths, size_t **nums, size_t ants)
 		if (new_counter > previous_counter)
 			previous_counter = new_counter;
 	}
-	printf("%d\n", previous_counter);
+	//printf("%d\n", previous_counter);
 	return (previous_counter);
 }

@@ -12,7 +12,7 @@
 
 #include "lem_in.h"
 
-static void	swap_start(t_graph *recipient, t_organiser *organiser, size_t go)
+void	swap_start(t_graph *recipient, t_organiser *organiser, size_t go)
 {
 	if (!recipient || !organiser->ants || !go)
 		return ;

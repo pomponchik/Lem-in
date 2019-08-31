@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   no_ways.c                                          :+:      :+:    :+:   */
+/*   print_file.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/22 20:04:24 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/08/30 22:35:06 by ahalmon-         ###   ########.fr       */
+/*   Created: 2019/08/31 17:14:38 by ahalmon-          #+#    #+#             */
+/*   Updated: 2019/08/31 17:27:36 by ahalmon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-void	no_way(t_graph **graph, size_t *count)
+void		print_file(char *filename)
 {
-	ft_exit_adjacency(graph, count);
-	ft_putstr_fd("Error: no way from start to finish.\n", 2);
-	exit(1);
-}
+	size_t	size;
+	void	*to_print;
 
-void	one_way(t_graph **graph, size_t *count)
-{
-	ft_exit_adjacency(graph, count);
-	exit(1);
+	to_print = ft_get_file(filename, &size);
+	if (size && to_print)
+		write(1, to_print, size);
+	free(to_print);
 }

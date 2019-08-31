@@ -71,10 +71,12 @@ static t_list	*get_ways(t_graph *end, t_organiser *organiser)
 	return (ft_lst_turn(result));
 }
 
-void			bfs(t_organiser *organiser)
+void			bfs(t_organiser *organiser, char *filename)
 {
 	t_list		*ways;
 
+	if (one_to_one(organiser, filename))
+		one_way(&(organiser->graph), &(organiser->size));
 	ways = get_ways(organiser->end, organiser);
 	if (!ways)
 		no_way(&(organiser->graph), &(organiser->size));
