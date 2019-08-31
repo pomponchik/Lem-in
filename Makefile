@@ -6,7 +6,7 @@
 #    By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/24 07:18:31 by ahalmon-          #+#    #+#              #
-#    Updated: 2019/08/31 20:54:22 by hlarson          ###   ########.fr        #
+#    Updated: 2019/08/31 22:14:40 by ahalmon-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ FILENAMES += ft_make_adjacency.c ft_validate.c stopper.c
 FILENAMES += put_first_adjacency.c ft_check_format_two.c free_chain.c
 FILENAMES += algorithm.c list_copy.c swap.c bfs.c
 FILENAMES += disflagger.c no_ways.c walking_ants.c print_swap.c
-FILENAMES += get_num_path.c print_file.c one_to_one.c
+FILENAMES += get_num_path.c print_file.c one_to_one.c print_map.c
 NAME = lem-in
 
 SRCS	=$(addprefix srcs/, $(FILENAMES))

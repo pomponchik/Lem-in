@@ -28,11 +28,11 @@ static int		one_to_one_prove(t_list *links)
 	return (0);
 }
 
-int				one_to_one(t_organiser *organiser, char *filename)
+int				one_to_one(t_organiser *organiser)
 {
 	if (!(one_to_one_prove((organiser->start)->adjacency)))
 		return (0);
-	print_file(filename);
+	print_map(organiser);
 	ft_putchar('\n');
 	while (organiser->ants)
 		swap_start(organiser->end, organiser, 1);

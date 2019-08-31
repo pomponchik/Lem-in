@@ -16,12 +16,13 @@ int	main(int argc, char **argv)
 {
 	t_organiser	organiser;
 
-	if (argc == 1)
+	argv = NULL;
+	if (argc != 1)
 		return (arg_equal_one());
-	if (ft_validate(argv, &organiser) < 0)
+	if (ft_validate(&organiser) < 0)
 		return (main_error());
-	bfs(&organiser, argv[1]);
-	print_file(argv[1]);
+	bfs(&organiser);
+	print_map(&organiser);
 	algorithm(&organiser);
 	return (0);
 }

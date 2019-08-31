@@ -101,7 +101,7 @@ int			ft_get_adjacency(char **line, t_graph **graph, int k, size_t *count)
 	return (0);
 }
 
-int			ft_validate(char **argv, t_organiser *organiser)
+int			ft_validate(t_organiser *organiser)
 {
 	int		k;
 	char	*line;
@@ -109,7 +109,7 @@ int			ft_validate(char **argv, t_organiser *organiser)
 	t_graph *asd;
 	size_t	count;
 
-	k = open(argv[1], O_RDONLY);
+	k = 0;
 	help = NULL;
 	line = NULL;
 	organiser->ants = ft_get_ant_num(k, &line);
@@ -125,6 +125,5 @@ int			ft_validate(char **argv, t_organiser *organiser)
 	if (ft_check_adjacency(asd, count) < 0)
 		return (ft_exit_adjacency(&asd, &count));
 	organiser->graph = (asd);
-	close(k);
 	return (0);
 }
