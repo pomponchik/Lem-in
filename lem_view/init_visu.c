@@ -22,9 +22,7 @@ t_visu	*init_visu(t_organiser *organiser)
 	visu->win = mlx_new_window(visu->mlx, 1920, 1080, "Lem_in");
 	visu->img = mlx_new_image(visu->mlx, 1920, 1080);
 	visu->data = mlx_get_data_addr(visu->img, &(visu->bits_per_pixel), &(visu->size_line), &(visu->endian));
-	printf("HIIIIIIIIII\n");
 	visu->x_min = ((t_graph *)organiser->graph)[0].x;
-	printf("HIIIIIIIIII\n");
 	visu->y_min = ((t_graph *)organiser->graph)[0].y;
 	visu->x_max = ((t_graph *)organiser->graph)[0].x;;
 	visu->y_max = ((t_graph *)organiser->graph)[0].y;

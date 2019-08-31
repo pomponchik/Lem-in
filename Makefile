@@ -6,7 +6,7 @@
 #    By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/24 07:18:31 by ahalmon-          #+#    #+#              #
-#    Updated: 2019/08/31 22:14:40 by ahalmon-         ###   ########.fr        #
+#    Updated: 2019/08/31 23:33:11 by ahalmon-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,13 +44,16 @@ re: fclean all
 
 lib:
 	@make -C ./Libft
+	@make -C ./lem_view
 	@make clean -C ./Libft
+	@make clean -C ./lem_view
 
 clean:
 	@rm -rf build/
 
 fclean: clean
 	@make fclean -C ./Libft
+	@make fclean -C ./lem_view
 	@rm -f $(NAME)
 
 build:

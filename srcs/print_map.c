@@ -6,7 +6,7 @@
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/31 22:02:52 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/08/31 22:07:02 by ahalmon-         ###   ########.fr       */
+/*   Updated: 2019/08/31 23:32:35 by ahalmon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static void	help_print_connections(t_organiser *organizer)
 	}
 }
 
-static void fill_graph(t_graph *graph, size_t size)
+static void	fill_graph(t_graph *graph, size_t size)
 {
 	size_t	i;
 
