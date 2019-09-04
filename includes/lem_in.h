@@ -54,6 +54,7 @@ typedef struct		s_organiser
 	t_list			*commands;
 	t_list			*ways;
 	size_t			short_way;
+	char            **map;
 }					t_organiser;
 
 int					ft_check_comment(char *line, t_help **help, \
@@ -64,7 +65,7 @@ int					ft_check_format_one(t_help **help, \
 int					check_first_line(char *line, t_help *help);
 t_graph				*create_graph(t_help *help, \
 	size_t *count, t_organiser *organiser);
-int					ft_validate(t_organiser *organiser);
+int					ft_validate(t_organiser *organiser, char **argv);
 int					count_num(int k);
 t_help				*create_help(int *start, int *end);
 void				add_help(t_help *tmp, t_help *help);
@@ -74,7 +75,7 @@ void				put_first_adjacency(char *line, \
 int					ft_make_adjacency(char *line, \
 	t_graph **graph, size_t *count);
 int					ft_exit_checking(char **line, t_help **help);
-int					ft_exit_adjacency_norm(char *c, char *line);
+int					ft_exit_adjacency_norm(char *c);
 int					ft_exit_adjacency_error(char *c, \
 	char *line, t_graph **graph, size_t *count);
 int					ft_exit_adjacency_error_two(char *line, \
