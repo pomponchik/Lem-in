@@ -6,7 +6,7 @@
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 21:47:02 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/09/05 18:48:12 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/09/05 18:49:20 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,5 +109,6 @@ void				swap_start(t_graph *recipient, \
 	t_organiser *organiser, size_t go);
 void				print_map(t_organiser *organizer);
 void				ft_del_map(t_organiser *organizer);
+void				create_map(t_organiser *organizer);
 
 #endif

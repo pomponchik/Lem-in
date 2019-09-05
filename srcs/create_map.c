@@ -6,11 +6,11 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 18:45:52 by hlarson           #+#    #+#             */
-/*   Updated: 2019/09/05 18:47:10 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/09/05 18:50:35 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lem-in.h"
+#include "lem_in.h"
 
 void		create_map(t_organiser *organizer)
 {
