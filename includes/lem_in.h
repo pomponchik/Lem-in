@@ -6,7 +6,7 @@
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 21:47:02 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/09/05 18:49:20 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/09/05 19:00:38 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ int					ft_exit_adjacency_error_two(\
 	t_graph **graph, size_t *count);
 int					arg_equal_one(void);
 int					ft_check_num(t_help *help, t_help *tmp);
-int					main_error();
+int					main_error(t_organiser *organizer);
 int					ft_check_adjacency(t_graph *graph, size_t count);
 int					ft_exit_adjacency(t_graph **graph, size_t *count);
 int					help_check_line(char *c, t_help *tmp);
