@@ -6,7 +6,7 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 18:13:06 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/22 02:25:50 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/09/05 19:08:36 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,22 +18,6 @@ int			ft_abs(int x)
 	if (x < 0)
 		return (-x);
 	return (x);
-}
-
-static void	check_values(t_visu *visu)
-{
-	if (visu->x_max + visu->x_movement > 1920
-				|| visu->x_max + visu->x_movement < 0)
-	{
-		ft_putstr("Error\n");
-		exit(0);
-	}
-	if (visu->y_max + visu->y_movement > 1080
-				|| visu->y_max + visu->y_movement < 0)
-	{
-		ft_putstr("Error\n");
-		exit(0);
-	}
 }
 
 void		get_movement(t_visu *visu)
@@ -60,7 +44,6 @@ void		get_movement(t_visu *visu)
 		visu->y_movement = -visu->y_min;
 		visu->zoom_y = 0.2;
 	}
-	check_values(visu);
 }
 
 void		set_point(int x, int y, t_point *point)
