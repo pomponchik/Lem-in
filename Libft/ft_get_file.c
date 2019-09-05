@@ -6,7 +6,7 @@
 /*   By: ahalmon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/01 19:11:42 by ahalmon-          #+#    #+#             */
-/*   Updated: 2019/05/03 17:07:33 by ahalmon-         ###   ########.fr       */
+/*   Updated: 2019/09/05 18:26:06 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void		*ft_get_file(char *path, size_t *size)
 	t_list	*lst;
 
 	*size = 0;
-	if (!(fd = ft_open_file_readonly(path)) \
+	if ((fd = ft_open_file_readonly(path)) < 0 \
 	|| BUFF_SIZE < 1 || read(fd, buf, 0) < 0)
 		return (NULL);
 	lst = NULL;

@@ -6,7 +6,7 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/10 21:35:31 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/10 21:36:17 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/09/05 18:08:25 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,26 +28,23 @@ int		ft_exit_adjacency(t_graph **graph, size_t *count)
 	return (-1);
 }
 
-int		ft_exit_adjacency_norm(char *c, char *line)
+int		ft_exit_adjacency_norm(char *c)
 {
 	ft_strdel(&c);
-	ft_strdel(&line);
 	return (0);
 }
 
-int		ft_exit_adjacency_error(char *c, char *line,
+int		ft_exit_adjacency_error(char *c,
 		t_graph **graph, size_t *count)
 {
 	ft_strdel(&c);
-	ft_strdel(&line);
 	ft_exit_adjacency(graph, count);
 	*count = 0;
 	return (-1);
 }
 
-int		ft_exit_adjacency_error_two(char *line, t_graph **graph, size_t *count)
+int		ft_exit_adjacency_error_two(t_graph **graph, size_t *count)
 {
-	ft_strdel(&line);
 	ft_exit_adjacency(graph, count);
 	*count = 0;
 	return (-1);

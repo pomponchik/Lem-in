@@ -6,7 +6,7 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/02 15:33:11 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/10 21:32:56 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/09/05 18:28:50 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,12 +87,11 @@ int				ft_check_format_one(t_help **help,
 	add_help(tmp, *help);
 	(*help)->name = ft_copy_name(line, i);
 	if (ft_check_name(*help, tmp) == -1)
-		return (ft_exit_checking(&line, &tmp));
+		return (ft_exit_checking(&tmp));
 	if (ft_get_num(help, line, &i, j) == -1)
-		return (ft_exit_checking(&line, &tmp));
+		return (ft_exit_checking(&tmp));
 	if (ft_check_num(*help, tmp) == -1)
-		return (ft_exit_checking(&line, &tmp));
+		return (ft_exit_checking(&tmp));
 	*help = (tmp == NULL) ? *help : tmp;
-	ft_strdel(&line);
 	return (0);
 }

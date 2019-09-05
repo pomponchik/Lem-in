@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   create_map.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/31 18:13:06 by hlarson           #+#    #+#             */
-/*   Updated: 2019/09/05 18:39:05 by hlarson          ###   ########.fr       */
+/*   Created: 2019/09/05 18:45:52 by hlarson           #+#    #+#             */
+/*   Updated: 2019/09/05 18:47:10 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lem_in.h"
+#include "lem-in.h"
 
-int	main(int argc, char **argv)
+void		create_map(t_organiser *organizer)
 {
-	t_organiser	organiser;
+	char	*a;
+	char	*b;
+	char	*c;
+	size_t	i;
 
-	argv = NULL;
-	if (argc != 1)
-		return (arg_equal_one());
-	if (ft_validate(&organiser) < 0)
-		return (main_error());
-	bfs(&organiser);
-	print_map(&organiser);
-	algorithm(&organiser);
-	ft_del_map(&organiser);
-	return (0);
+	a = ft_strnew(0);
+	c = ft_get_file(0, &i);
+	b = ft_memjoin(c, i, a, 1);
+	organizer->map = ft_strsplit(b, '\n');
+	ft_strdel(&b);
+	ft_strdel(&c);
+	ft_strdel(&a);
 }

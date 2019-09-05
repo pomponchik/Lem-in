@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_delete_map.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/31 18:13:06 by hlarson           #+#    #+#             */
-/*   Updated: 2019/09/05 18:39:05 by hlarson          ###   ########.fr       */
+/*   Created: 2019/09/05 18:34:37 by hlarson           #+#    #+#             */
+/*   Updated: 2019/09/05 18:41:48 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-int	main(int argc, char **argv)
+void	ft_del_map(t_organiser *organizer)
 {
-	t_organiser	organiser;
+	size_t	i;
+	char	**line;
 
-	argv = NULL;
-	if (argc != 1)
-		return (arg_equal_one());
-	if (ft_validate(&organiser) < 0)
-		return (main_error());
-	bfs(&organiser);
-	print_map(&organiser);
-	algorithm(&organiser);
-	ft_del_map(&organiser);
-	return (0);
+	i = 0;
+	line = organizer->map;
+	while (line[i])
+	{
+		free(line[i]);
+		i++;
+	}
+	free(line);
 }

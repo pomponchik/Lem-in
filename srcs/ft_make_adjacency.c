@@ -6,7 +6,7 @@
 /*   By: hlarson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/03 17:35:58 by hlarson           #+#    #+#             */
-/*   Updated: 2019/08/14 12:31:40 by hlarson          ###   ########.fr       */
+/*   Updated: 2019/09/05 18:12:00 by hlarson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,12 +63,12 @@ int			ft_make_adjacency(char *line, t_graph **graph, size_t *count)
 		i++;
 	first_link = get_first_name(line, i, *graph, *count);
 	if (first_link == -1)
-		return (ft_exit_adjacency_error_two(line, graph, count));
+		return (ft_exit_adjacency_error_two(graph, count));
 	c = ft_strnew(ft_strlen(line) - i);
 	c = ft_strcpy(c, line + i + 1);
 	second_link = get_second_link(c, *graph, *count);
 	if (first_link == second_link || second_link == -1)
-		return (ft_exit_adjacency_error(c, line, graph, count));
+		return (ft_exit_adjacency_error(c, graph, count));
 	connect_link(graph, first_link, second_link);
-	return (ft_exit_adjacency_norm(c, line));
+	return (ft_exit_adjacency_norm(c));
 }
